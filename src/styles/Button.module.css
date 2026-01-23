@@ -1,0 +1,25 @@
+.buttonContainer {
+  margin: 20px 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 100%;
+  height: 50px;
+  background: #2a6bff;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .button {
+    width: 250px;
+  }
+}

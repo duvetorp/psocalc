@@ -1,0 +1,52 @@
+.firstPage {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  min-height: 89dvh;
+  padding: 40px 0;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.generalInfo,
+.mathematicalFoundation,
+.disclaimerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 20px;
+}
+
+.generalInfo p,
+.mathematicalFoundation p,
+.disclaimerInfo p {
+  margin: 0 0 5px 0;
+}
+
+.generalInfo a,
+.mathematicalFoundation a,
+.disclaimerInfo a {
+  text-decoration: underline;
+}
+
+.orderedList {
+  list-style: decimal;
+  padding-left: 30px;
+}
+
+.orderedList li {
+  margin: 10px 0 0 0;
+}

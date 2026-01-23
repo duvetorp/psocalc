@@ -1,0 +1,76 @@
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.resultsContainer {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  padding: 20px 20px 20px 20px;
+  border-radius: 20px 20px 20px 20px;
+  gap: 40px;
+}
+
+.resultsTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resultsTitle h1 {
+  font-size: 18px;
+}
+
+.resultsDate p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.resultsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.resultsContent h2 {
+  font-size: 18px;
+}
+
+.resultsAreaItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultsContent p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.resultsButton {
+  margin: 20px 0 0 0;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .results {
+    min-height: 85dvh;
+  }
+
+  .resultsContainer {
+    padding: 40px;
+    gap: 40px;
+    width: 800px;
+  }
+
+  .resultsTitle h1 {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "categories": [
+    {
+      "id": "head",
+      "title": "Head",
+      "description": "Here are different images and information about heads."
+    },
+    {
+      "id": "arm",
+      "title": "Arms",
+      "description": "Here are different images and information about the arms."
+    },
+    {
+      "id": "torso",
+      "title": "Torso",
+      "description": "Here are different images and information about torso."
+    },
+    {
+      "id": "leg",
+      "title": "Legs",
+      "description": "Here are different images and information about legs."
+    }
+  ],
+  "translation": {
+    "chooseArea": "Choose area",
+    "hands": "Hands",
+    "hand": "Hand",
+    "handText": "Specify the affected skin area using the palm method, both front and back.",
+    "redness": "Redness",
+    "scaling": "Scaling",
+    "thickness": "Thickness",
+    "seeResults": "See results",
+    "done": "Done",
+    "imagesTitles": ["None", "Mild", "Moderate", "Severe", "Very severe"],
+    "continue": "Continue",
+    "results": "Results",
+    "yourResults": "Your values",
+    "back": "Back",
+    "popupInfoText": "<p>Specify REDNESS, THICKNESS, SCALING on the affected area. If different psoriasis patches have different characteristics, try to find an average for the area. The area involved is estimated using the palm method (PSA palm-surface-area). One palm (without fingers) = one PSA.</p><br><p> THICKNESS implies that you assess how raised lesions are. Use your fingers to see if you can feel the edge of the lesions. Please note that BUTTOCKS are part of the LEGS.</p>",
+    "generalInfoButton": "General info",
+    "mathematicalFoundationButton": "Calculations",
+    "disclaimerButton": "Disclaimer",
+    "chooseHandsHere": "Choose number of hands"
+  },
+  "generalInfo": {
+    "backgroundTitle": "About PsoCalc",
+    "backgroundText": "PsoCalc has been created on the initiative of Albert Duvetorp at the Dept of Dermatology at Skåne University Hospital. The project has been financially supported by ABBVIE and was carried out in collaboration with Webexpress Stockholm.",
+    "whyTitle": "Why?",
+    "whyText": "Everyone studying psoriasis in the skin needs to be able to estimate disease activity in a simple way. We want to help through this open-source project. Our goal is for the web application to be used as it is or adapted to the user's own study.",
+    "licensTitle": "License",
+    "licensText": "zPASI can be used according to CC-BY 4.0. The web application's code according to the MIT License for open-source code. You are free to use and modify the web application's code. We wish that you credit the creators."
+  },
+  "mathematicalFoundation": {
+    "BSATitle": "BSA (Body Surface Area)",
+    "BSAText": "Is calculated based on the following assumptions. A. Head-neck-neck accounts for 10% of the total skin surface area. B. Arms and hands account for 20% of the total skin surface area. C. Torso (abdomen, chest, back) accounts for 30% of the total skin surface  area. D. Legs, buttocks and feet account for 40% of the total skin area. E. Palm Surface Area (PSA) accounts for 0.5% of the total skin area. PSA being the area of palm of the person with psoriasis (hand without fingers).",
+    "PASITitle": "PASI",
+    "PASIText": "Is calculated based on the method described by Fredriksson and Pettersson Dermatologica 157: 238 -244 (1978). In the web application, calculations are also based on assumptions made for BSA.",
+    "zPASITitle": "zPASI",
+    "zPASIText": "Modified PASI where the AREA score in the PASI calculation is calculated according to the following formula:",
+    "procent": "a% corresponds to % of the affected area (head, arms, torso, legs) covered with psoriasis."
+  },
+  "disclaimer": {
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerText": "The creators of this web application disclaim legal responsibility for its use/application. The web application is not a registered medical device. The user should use the web application critically and is responsible for ensuring that the calculations are performed correctly.",
+    "MITLicenceTitle": "MIT License",
+    "MITLicenceText": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: ",
+    "copyrightNotice": "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.",
+    "software": "THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "CCBYTitle": "CC-BY 4.0",
+    "youAreFreeTo": "You are free to:",
+    "youAreFreeToFirst": "Share - copy and redistribute the material in any medium or format for any purpose, even commercially.",
+    "youAreFreeToSecond": "Adapt - remix, transform, and build upon the material for any purpose, even commercially.",
+    "youAreFreeToThird": "The licensor cannot revoke these freedoms as long as you follow the license terms.",
+    "underTheFollowing": "Under the following terms:",
+    "underTheFollowingFirst": "Attribution - You must give <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-appropriate-credit' target='_blank'>appropriate credit</a>, provide a link to the license, and <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-indicate-changes' target='_blank'>indicate if changes were made</a>. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.",
+    "underTheFollowingSecond": "No additional restrictions — You may not apply legal terms or <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-technological-measures' target='_blank'>technological measures</a> that legally restrict others from doing anything the license permits.",
+    "notices": "Notices:",
+    "noticesFirst": "You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-exception-or-limitation' target='_blank'>exception or limitation</a>.",
+    "noticesSecond": "No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-publicity-privacy-or-moral-rights' target='_blank'>publicity, privacy, or moral rights</a> may limit how you use the material."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "categories": [
+    {
+      "id": "head",
+      "title": "Hoofd",
+      "description": "Hier zijn verschillende afbeeldingen en informatie over het hoofdgebiedfden."
+    },
+    {
+      "id": "arm",
+      "title": "Armen",
+      "description": "Hier zijn verschillende afbeeldingen en informatie over de armen."
+    },
+    {
+      "id": "torso",
+      "title": "Romp",
+      "description": "Hier zijn verschillende afbeeldingen en informatie over romp."
+    },
+    {
+      "id": "leg",
+      "title": "Benen",
+      "description": "Hier zijn verschillende afbeeldingen en informatie over benen."
+    }
+  ],
+  "translation": {
+    "chooseArea": "Kies gebied",
+    "hands": "Handen",
+    "hand": "Hand",
+    "handText": "Geef het getroffen huidgebied aan met de handpalm-methode, zowel voor- als achterkant.",
+    "redness": "Roodheid",
+    "scaling": "Schilfering",
+    "thickness": "Dikte",
+    "seeResults": "Bekijk resultaten",
+    "done": "Klaar",
+    "imagesTitles": ["Geen", "Licht", "Matig", "Ernstig", "Zeer ernstig"],
+    "continue": "Doorgaan",
+    "results": "Resultaten",
+    "yourResults": "Uw waarden",
+    "back": "Terug",
+    "popupInfoText": "<p>Specificeer ROODHEID, DIKTE, SCHILFERING op het aangedane gebied. Als verschillende psoriasisplekken verschillende kenmerken hebben, probeer dan een gemiddelde voor het gebied te vinden. Het betrokken gebied wordt ingeschat met de palm-methode (PSA palmoppervlak). Eén palm (zonder vingers) = één PSA.</p><br><p>DIKTE houdt in dat u beoordeelt hoe verheven de laesies zijn. Gebruik uw vingers om te voelen of u de rand van de laesies kunt voelen. Let op dat de BILLEN onderdeel zijn van de BENEN.</p>",
+    "generalInfoButton": "Algemene info",
+    "mathematicalFoundationButton": "Wiskundige basis",
+    "disclaimerButton": "Disclaimer",
+    "chooseHandsHere": "Kies aantal handen"
+  },
+  "generalInfo": {
+    "backgroundTitle": "Over PsoCalc",
+    "backgroundText": "PsoCalc is ontwikkeld op initiatief van Albert Duvetorp van de afdeling Dermatologie van het Universitair Ziekenhuis Skåne. Het project is financieel ondersteund door ABBVIE en uitgevoerd in samenwerking met Webexpress Stockholm.",
+    "whyTitle": "Waarom?",
+    "whyText": "Iedereen die psoriasis van de huid bestudeert, moet de ziekteactiviteit op een eenvoudige manier kunnen inschatten. Met dit open-sourceproject willen wij daarbij helpen. Ons doel is dat de webapplicatie gebruikt wordt zoals die is, of aangepast wordt aan de eigen studie van de gebruiker.",
+    "licensTitle": "Licentie",
+    "licensText": "zPASI kan worden gebruikt onder de voorwaarden van de CC-BY 4.0-licentie. De code van de webapplicatie valt onder de MIT-licentie voor open-source code. U bent vrij om de code van de webapplicatie te gebruiken en aan te passen. Wij stellen het op prijs als u de makers vermeldt."
+  },
+  "mathematicalFoundation": {
+    "BSATitle": "Lichaamsoppervlak (Body Surface Area, BSA)",
+    "BSAText": "Wordt berekend op basis van de volgende aannames: A. Hoofd, hals en nek vormen 10% van het totale huidoppervlak. B. Armen en handen vormen 20% van het totale huidoppervlak. C. Romp (buik, borst en rug) vormt 30% van het totale huidoppervlak. D. Benen, billen en voeten vormen 40% van het totale huidoppervlak. E. Het handpalmoppervlak (Palm Surface Area, PSA) vormt 0,5% van het totale huidoppervlak. PSA verwijst naar het oppervlak van de handpalm van de persoon met psoriasis (zonder de vingers).",
+    "PASITitle": "PASI",
+    "PASIText": "Wordt berekend op basis van de methode beschreven door Fredriksson en Pettersson in Dermatologica 157: 238-244 (1978). In de webapplicatie zijn de berekeningen ook gebaseerd op aannames voor BSA.",
+    "zPASITitle": "zPASI",
+    "zPASIText": "Gemodificeerde PASI, waarbij de AREA-score in de PASI-berekening wordt berekend volgens de volgende formule:",
+    "procent": "a% komt overeen met het % van het aangedane gebied (hoofd, armen, romp, benen) bedekt met psoriasis."
+  },
+  "disclaimer": {
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerText": "De makers van deze webapplicatie wijzen elke juridische verantwoordelijkheid voor het gebruik ervan af. De webapplicatie is geen geregistreerd medisch hulpmiddel. De gebruiker dient de webapplicatie kritisch te gebruiken en is zelf verantwoordelijk voor het correct uitvoeren van de berekeningen.",
+    "MITLicenceTitle": "MIT License",
+    "MITLicenceText": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: ",
+    "copyrightNotice": "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.",
+    "software": "THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "CCBYTitle": "CC-BY 4.0",
+    "youAreFreeTo": "You are free to:",
+    "youAreFreeToFirst": "Share - copy and redistribute the material in any medium or format for any purpose, even commercially.",
+    "youAreFreeToSecond": "Adapt - remix, transform, and build upon the material for any purpose, even commercially.",
+    "youAreFreeToThird": "The licensor cannot revoke these freedoms as long as you follow the license terms.",
+    "underTheFollowing": "Under the following terms:",
+    "underTheFollowingFirst": "Attribution - You must give <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-appropriate-credit' target='_blank'>appropriate credit</a>, provide a link to the license, and <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-indicate-changes' target='_blank'>indicate if changes were made</a>. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.",
+    "underTheFollowingSecond": "No additional restrictions — You may not apply legal terms or <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-technological-measures' target='_blank'>technological measures</a> that legally restrict others from doing anything the license permits.",
+    "notices": "Notices:",
+    "noticesFirst": "You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-exception-or-limitation' target='_blank'>exception or limitation</a>.",
+    "noticesSecond": "No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-publicity-privacy-or-moral-rights' target='_blank'>publicity, privacy, or moral rights</a> may limit how you use the material."
+  }
+}

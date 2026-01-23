@@ -1,0 +1,27 @@
+{
+  "name": "psoriasis-webbapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "next": "15.1.6",
+    "rc-slider": "^11.1.8",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-draggable": "^4.4.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^4.0.6"
+  }
+}

@@ -1,0 +1,43 @@
+.sliderInput {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.sliderInputContainer {
+  display: flex;
+  align-items: center;
+  background: #e9eef4;
+  padding: 20px 10px;
+  border-radius: 15px;
+  width: 100%;
+  margin: auto;
+  gap: 10px;
+  height: 32px;
+}
+
+.sliderInputDecreaseButton,
+.sliderInputIncreaseButton {
+  background: #cbd5e1;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: #000;
+}
+
+.sliderInputDecreaseWrapper {
+  flex: 1;
+  position: relative;
+  padding: 0 30px;
+}
+
+@media (min-width: 1200px) {
+  .sliderInput {
+    padding: 0;
+  }
+}

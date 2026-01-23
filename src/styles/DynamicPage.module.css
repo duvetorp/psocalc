@@ -1,0 +1,59 @@
+.dynamicPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 20px 0;
+}
+
+.dynamicPageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+}
+
+.bodyImages {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 0 10px 20px 10px;
+  border-radius: 0 0 20px 20px;
+}
+
+.backButtonContainer img {
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .dynamicPageContent {
+    width: 1200px;
+  }
+
+  .dynamicPageContent {
+    flex-direction: row-reverse;
+    gap: 5px;
+  }
+
+  .bodyImages {
+    padding: 40px;
+    border-radius: 20px;
+    height: 855px;
+    gap: 20px;
+    width: 70%;
+  }
+
+  .backButtonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dynamicPage {
+    min-height: 96dvh;
+    padding: 40px;
+  }
+}

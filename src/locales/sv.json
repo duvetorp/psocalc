@@ -1,0 +1,81 @@
+{
+  "categories": [
+    {
+      "id": "head",
+      "title": "Huvud",
+      "description": "Här är olika bilder och information om huvuden."
+    },
+    {
+      "id": "arm",
+      "title": "Armar",
+      "description": "Här är olika bilder och information om armar."
+    },
+    {
+      "id": "torso",
+      "title": "Bål",
+      "description": "Här är olika bilder och information om bålen."
+    },
+    {
+      "id": "leg",
+      "title": "Ben",
+      "description": "Här är olika bilder och information om ben."
+    }
+  ],
+  "translation": {
+    "chooseArea": "Välj område",
+    "hands": "Händer",
+    "hand": "Hand",
+    "handText": "Ange det berörda hudområdet med handflatemetoden, både fram- och baksida.",
+    "redness": "Rodnad",
+    "scaling": "Fjällning",
+    "thickness": "Tjocklek",
+    "seeResults": "Se resultat",
+    "done": "Klar",
+    "imagesTitles": ["Ingen", "Lindrig", "Måttlig", "Svår", "Mycket svår"],
+    "continue": "Fortsätt",
+    "results": "Resultat",
+    "yourResults": "Dina värden",
+    "back": "Tillbaka",
+    "popupInfoText": "<p>Ange RODNAD, TJOCKLEK, FJÄLLNING på valda kroppsdelen. Om olika psoriasis fläckar har olika egenskaper försök hitta ett genomsnitt för området. Ytan med psoriasis skattas med hjälp av handflatemetoden (PSA palm-surface-area). En PSA = en handflata (utan fingrar).</p><br><p> TJOCKLEK innebär att man bedömmer hur upphöjd huden är. Känn med fingrarna om man kan känna psoriasisfläckarna. Tänk även på att RUMPAN är en del av BEN.</p>",
+    "generalInfoButton": "Allmän info",
+    "mathematicalFoundationButton": "Uträkningsprinciper",
+    "disclaimerButton": "Disclaimer",
+    "chooseHandsHere": "Välj antal händer"
+  },
+  "generalInfo": {
+    "backgroundTitle": "Om PsoCalc",
+    "backgroundText": "PsoCalc har skapats på initiativ av Albert Duvetorp vid hudklinken Skånes Universitetssjukhus. Projektet har stöttats ekonomiskt av ABBVIE och genomförts i samarbete med Webexpress Stockholm.",
+    "whyTitle": "Varför?",
+    "whyText": "Alla som studerar psoriasis i huden är i behov av att på ett enkelt sätt kunna skatta sjukdomsaktivitet. Vi vill hjälpa till genom detta open-source projekt. Vårt mål är att webapplikationen skall kunna användas som den är eller anpassas till brukarens egna studie.",
+    "licensTitle": "Licens",
+    "licensText": "zPASI kan brukas enligt CC-BY 4.0. Webapplikationens kod enligt MIT Licence för open-source kod. Man får alltså använda och modifiera webapplikationens kod fritt. Vi önskar att man krediterar skaparna."
+  },
+  "mathematicalFoundation": {
+    "BSATitle": "BSA (Body Surface Area)",
+    "BSAText": "Beräknas utifrån följande antaganden. A. Huvud-nacke-hals utgör 10% av total hudyta. B. Armar-händer utgör 20% av total hudyta. C. Bål (mage-rygg-bröst) utgör 30% av total hudyta. D. Ben-rumpa-fötter utgör 40% av total hudyta. E. Palm Surface Area (PSA) utgör 0.5% av total hudyta. PSA innefattar handflatan hos personen med psoriasis (handen utan fingrar inräknade).",
+    "PASITitle": "PASI",
+    "PASIText": "Beräknas utifrån metod beskriven av Fredriksson och Pettersson Dermatologica 157: 238 -244 (1978). I webapplikationen bygger beräkningar även på antaganden som görs för BSA.",
+    "zPASITitle": "zPASI",
+    "zPASIText": "Modifierad PASI där AREA score i PASI beräkningen räknas ut enligt följande formel:",
+    "procent": "a% motsvarar % av berört område (huvud, armar, bål, ben) som är täckt med psoriasis."
+  },
+  "disclaimer": {
+    "disclaimerTitle": "Ansvarsfriskrivning",
+    "disclaimerText": "Skaparna av denna webapplikation avsäger sig juridiskt ansvar för dess användning/tillämpning. Webapplikationen är ej medical device registrerad. Brukaren bör använda webapplikationen kritiskt och är själv ansvarig för att kontrollera att beräkningar är korrekt utförda.",
+    "MITLicenceTitle": "MIT License",
+    "MITLicenceText": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:",
+    "copyrightNotice": "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.",
+    "software": "THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "CCBYTitle": "CC-BY 4.0",
+    "youAreFreeTo": "You are free to:",
+    "youAreFreeToFirst": "Share - copy and redistribute the material in any medium or format for any purpose, even commercially.",
+    "youAreFreeToSecond": "Adapt - remix, transform, and build upon the material for any purpose, even commercially.",
+    "youAreFreeToThird": "The licensor cannot revoke these freedoms as long as you follow the license terms.",
+    "underTheFollowing": "Under the following terms:",
+    "underTheFollowingFirst": "Attribution - You must give <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-appropriate-credit' target='_blank'>appropriate credit</a>, provide a link to the license, and <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-indicate-changes' target='_blank'>indicate if changes were made</a>. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.",
+    "underTheFollowingSecond": "No additional restrictions — You may not apply legal terms or <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-technological-measures' target='_blank'>technological measures</a> that legally restrict others from doing anything the license permits.",
+    "notices": "Notices:",
+    "noticesFirst": "You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-exception-or-limitation' target='_blank'>exception or limitation</a>.",
+    "noticesSecond": "No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-publicity-privacy-or-moral-rights' target='_blank'>publicity, privacy, or moral rights</a> may limit how you use the material."
+  }
+}
