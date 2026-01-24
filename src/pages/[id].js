@@ -10,6 +10,8 @@ import { useArea } from "@/context/AreaContext";
 import BackButton from "@/components/BackButton";
 import useDeviceType from "@/hooks/useDeviceType";
 import InfoPopup from "@/components/InfoPopup";
+import { assetPath } from "@/lib/assetPath";
+import sv from "@/locales/sv.json";
 
 export default function KategoriPage() {
   const router = useRouter();
@@ -54,7 +56,7 @@ export default function KategoriPage() {
             {!isMobile && <BackButton />}
             {!isMobile && (
               <Image
-                src="/images/info.png"
+                src={assetPath("/images/info.png")}
                 alt="Back"
                 width={35}
                 height={36}
@@ -75,4 +77,21 @@ export default function KategoriPage() {
       </div>
     </div>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = sv.categories.map((category) => ({
+    params: { id: category.id },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps() {
+  return {
+    props: {},
+  };
 }

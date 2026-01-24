@@ -3,19 +3,14 @@ import { TranslationProvider } from "@/context/TranslationContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { AreaProvider } from "@/context/AreaContext";
 import "@/styles/globals.css";
-import { Nunito_Sans } from "next/font/google";
-
-const nunitoSans = Nunito_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
-  variable: "--font-nunito",
-});
+import { assetPath } from "@/lib/assetPath";
 
 export default function MyApp({ Component, pageProps }) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={assetPath("/favicon.ico")} />
         <title>Psoriasis App - Hantera Din Hud</title>
         <meta
           name="description"
@@ -23,6 +18,14 @@ export default function MyApp({ Component, pageProps }) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <style jsx global>{`
+        :root {
+          --base-path: "${basePath}";
+          --bg-image: url("${basePath}/images/background.webp");
+          --body-front-image: url("${basePath}/images/bodies-2.svg");
+          --body-back-image: url("${basePath}/images/male_back.svg");
+        }
+      `}</style>
       <TranslationProvider>
         <AreaProvider>
           <LanguageSwitcher />

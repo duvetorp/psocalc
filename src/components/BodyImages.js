@@ -6,6 +6,7 @@ import { useArea } from "@/context/AreaContext";
 import Sliderinput from "@/components/SliderInput";
 import useImages from "@/hooks/useImages";
 import useDeviceType from "@/hooks/useDeviceType";
+import { assetPath } from "@/lib/assetPath";
 
 const BodyImages = ({ id, changeSide }) => {
   const { t } = useTranslation();
@@ -55,7 +56,7 @@ const BodyImages = ({ id, changeSide }) => {
             <div className={Styles.changeSide}>
               <Image
                 onClick={changeSide}
-                src="/images/change_side.png"
+                src={assetPath("/images/change_side.png")}
                 alt="hands"
                 width={40}
                 height={40}

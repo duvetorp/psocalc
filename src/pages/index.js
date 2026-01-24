@@ -5,6 +5,7 @@ import { useTranslation } from "@/context/TranslationContext";
 import Styles from "@/styles/FirstPage.module.css";
 import Button from "@/components/Button";
 import InfoSwitcher from "@/components/InfoSwitcher";
+import { assetPath } from "@/lib/assetPath";
 
 const FirstPage = () => {
   const { t } = useTranslation();
@@ -12,7 +13,12 @@ const FirstPage = () => {
   return (
     <div className={Styles.firstPage}>
       <div className={Styles.logoContainer}>
-        <Image src="/images/logo.png" alt="Logo" width={233} height={133} />
+        <Image
+          src={assetPath("/images/logo.png")}
+          alt="Logo"
+          width={233}
+          height={133}
+        />
       </div>
       <div className={Styles.infoContainer}>
         <InfoSwitcher />

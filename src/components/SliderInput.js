@@ -5,6 +5,7 @@ import { useArea } from "@/context/AreaContext";
 import Styles from "@/styles/SliderInput.module.css";
 import { useTranslation } from "@/context/TranslationContext";
 import Image from "next/image";
+import { assetPath } from "@/lib/assetPath";
 
 const SliderInput = ({ id }) => {
   const { areas, setAreas } = useArea();
@@ -79,7 +80,7 @@ const SliderInput = ({ id }) => {
                   }}
                 >
                   <Image
-                    src="/images/hand.svg"
+                    src={assetPath("/images/hand.svg")}
                     alt="hand"
                     width={62}
                     height={65}

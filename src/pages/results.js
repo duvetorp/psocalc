@@ -7,6 +7,7 @@ import BsaComponent from "@/components/BsaComponent";
 import Button from "@/components/Button";
 import { useTranslation } from "@/context/TranslationContext";
 import { useArea } from "@/context/AreaContext";
+import { assetPath } from "@/lib/assetPath";
 
 const Results = () => {
   const { areas } = useArea();
@@ -23,7 +24,7 @@ const Results = () => {
       <div className={Styles.resultsContainer}>
         <div className={Styles.resultsTitle}>
           <Image
-            src="/images/stetoskop.png"
+            src={assetPath("/images/stetoskop.png")}
             alt="stetoskop"
             width={38}
             height={38}

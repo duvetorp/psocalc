@@ -1,26 +1,27 @@
-import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Styles from "@/styles/LanguageSwitcher.module.css";
+import { useTranslation } from "@/context/TranslationContext";
+import { assetPath } from "@/lib/assetPath";
 
 const languages = [
-  { code: "sv", label: "Svenska", flag: "/images/flags/sv.png" },
-  { code: "en", label: "English", flag: "/images/flags/en.png" },
-  { code: "nl", label: "Nederlands", flag: "/images/flags/nl.png" },
+  { code: "sv", label: "Svenska", flag: assetPath("/images/flags/sv.png") },
+  { code: "en", label: "English", flag: assetPath("/images/flags/en.png") },
+  { code: "nl", label: "Nederlands", flag: assetPath("/images/flags/nl.png") },
 ];
 
 export default function LanguageSwitcher() {
-  const router = useRouter();
-  const [selectedLang, setSelectedLang] = useState(router.locale || "sv");
+  const { locale, changeLanguage } = useTranslation();
+  const [selectedLang, setSelectedLang] = useState(locale || "sv");
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
-    setSelectedLang(router.locale);
-  }, [router.locale]);
+    setSelectedLang(locale || "sv");
+  }, [locale]);
 
   const handleChange = (newLocale) => {
     setSelectedLang(newLocale);
-    router.push(router.pathname, router.asPath, { locale: newLocale });
+    changeLanguage(newLocale);
     setDropdownOpen(false);
   };
 

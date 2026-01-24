@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Styles from "@/styles/BackButton.module.css";
 import { useRouter } from "next/router";
+import { assetPath } from "@/lib/assetPath";
 
 const BackButton = () => {
   const router = useRouter();
@@ -16,7 +17,7 @@ const BackButton = () => {
   return (
     <div className={Styles.backButtonWrapper}>
       <Image
-        src="/images/back.png"
+        src={assetPath("/images/back.png")}
         alt="Back"
         width={35}
         height={36}

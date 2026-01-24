@@ -7,6 +7,7 @@ import useAreaStyles from "@/hooks/useAreaStyles";
 import useDeviceType from "@/hooks/useDeviceType";
 import BackButton from "@/components/BackButton";
 import InfoPopup from "@/components/InfoPopup";
+import { assetPath } from "@/lib/assetPath";
 
 const Body = ({ isFrontBody, id, showThis, changeSide }) => {
   const { areas } = useArea();
@@ -49,7 +50,7 @@ const Body = ({ isFrontBody, id, showThis, changeSide }) => {
         {!isMobile && (
           <Image
             onClick={changeSide}
-            src="/images/change_side.png"
+            src={assetPath("/images/change_side.png")}
             alt="hands"
             width={40}
             height={40}
@@ -59,7 +60,7 @@ const Body = ({ isFrontBody, id, showThis, changeSide }) => {
           <>
             <BackButton />
             <Image
-              src="/images/info.png"
+              src={assetPath("/images/info.png")}
               alt="Back"
               width={35}
               height={36}
@@ -118,7 +119,7 @@ const Body = ({ isFrontBody, id, showThis, changeSide }) => {
       ) : (
         <Image
           className={Styles.bodyImage}
-          src="/images/bodies-2.svg"
+          src={assetPath("/images/bodies-2.svg")}
           alt="hero"
           width={163}
           height={359}

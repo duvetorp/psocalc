@@ -19,11 +19,11 @@
 }
 
 .bodyImageFront {
-  background-image: url("/images/bodies-2.svg");
+  background-image: var(--body-front-image);
 }
 
 .bodyImageBack {
-  background-image: url("/images/male_back.svg");
+  background-image: var(--body-back-image);
 }
 
 .bodyImageAreaRedness,
