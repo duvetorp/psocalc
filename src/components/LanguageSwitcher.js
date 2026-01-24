@@ -8,6 +8,7 @@ const languages = [
   { code: "sv", label: "Svenska", flag: assetPath("/images/flags/sv.png") },
   { code: "en", label: "English", flag: assetPath("/images/flags/en.png") },
   { code: "nl", label: "Nederlands", flag: assetPath("/images/flags/nl.png") },
+  { code: "es", label: "Español", flag: assetPath("/images/flags/es.svg") },
 ];
 
 export default function LanguageSwitcher() {

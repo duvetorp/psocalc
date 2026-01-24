@@ -1,0 +1,81 @@
+{
+  "categories": [
+    {
+      "id": "head",
+      "title": "Cabeza",
+      "description": "Aquí hay diferentes imágenes e información sobre la cabeza."
+    },
+    {
+      "id": "arm",
+      "title": "Brazos",
+      "description": "Aquí hay diferentes imágenes e información sobre los brazos."
+    },
+    {
+      "id": "torso",
+      "title": "Torso",
+      "description": "Aquí hay diferentes imágenes e información sobre el torso."
+    },
+    {
+      "id": "leg",
+      "title": "Piernas",
+      "description": "Aquí hay diferentes imágenes e información sobre las piernas."
+    }
+  ],
+  "translation": {
+    "chooseArea": "Elige área",
+    "hands": "Manos",
+    "hand": "Mano",
+    "handText": "Indica el área de piel afectada usando el método de la palma, tanto por delante como por detrás.",
+    "redness": "Enrojecimiento",
+    "scaling": "Descamación",
+    "thickness": "Grosor",
+    "seeResults": "Ver resultados",
+    "done": "Listo",
+    "imagesTitles": ["Ninguna", "Leve", "Moderada", "Severa", "Muy severa"],
+    "continue": "Continuar",
+    "results": "Resultados",
+    "yourResults": "Tus valores",
+    "back": "Atrás",
+    "popupInfoText": "<p>Indica ENROJECIMIENTO, GROSOR, DESCAMACIÓN en el área afectada. Si distintas placas de psoriasis tienen características diferentes, intenta encontrar un promedio para el área. La superficie afectada se estima usando el método de la palma (PSA palm-surface-area). Una palma (sin dedos) = un PSA.</p><br><p> El GROSOR implica evaluar qué tan elevadas están las lesiones. Usa los dedos para sentir si puedes percibir el borde de las lesiones. Ten en cuenta que los GLÚTEOS forman parte de las PIERNAS.</p>",
+    "generalInfoButton": "Información general",
+    "mathematicalFoundationButton": "Fundamento matemático",
+    "disclaimerButton": "Descargo de responsabilidad",
+    "chooseHandsHere": "Elige número de manos"
+  },
+  "generalInfo": {
+    "backgroundTitle": "Acerca de PsoCalc",
+    "backgroundText": "PsoCalc se creó por iniciativa de Albert Duvetorp en el Departamento de Dermatología del Hospital Universitario de Skåne. El proyecto ha recibido apoyo financiero de ABBVIE y se llevó a cabo en colaboración con Webexpress Stockholm.",
+    "whyTitle": "¿Por qué?",
+    "whyText": "Todos los que estudian la psoriasis en la piel necesitan poder estimar la actividad de la enfermedad de forma sencilla. Queremos ayudar con este proyecto de código abierto. Nuestro objetivo es que la aplicación web se use tal como está o se adapte al estudio propio del usuario.",
+    "licensTitle": "Licencia",
+    "licensText": "zPASI puede usarse según CC-BY 4.0. El código de la aplicación web está bajo la Licencia MIT para código abierto. Eres libre de usar y modificar el código de la aplicación web. Agradecemos que se dé crédito a los creadores."
+  },
+  "mathematicalFoundation": {
+    "BSATitle": "BSA (Superficie corporal)",
+    "BSAText": "Se calcula a partir de las siguientes suposiciones. A. Cabeza-cuello-cuello representan el 10% de la superficie total de la piel. B. Brazos y manos representan el 20% de la superficie total de la piel. C. Torso (abdomen, pecho, espalda) representa el 30% de la superficie total de la piel. D. Piernas, glúteos y pies representan el 40% de la superficie total de la piel. E. El Área de la Palma (PSA) representa el 0,5% de la superficie total de la piel. PSA es el área de la palma de la persona con psoriasis (mano sin dedos).",
+    "PASITitle": "PASI",
+    "PASIText": "Se calcula según el método descrito por Fredriksson y Pettersson en Dermatologica 157: 238-244 (1978). En la aplicación web, los cálculos también se basan en suposiciones hechas para BSA.",
+    "zPASITitle": "zPASI",
+    "zPASIText": "PASI modificado en el que la puntuación de ÁREA en el cálculo del PASI se calcula según la siguiente fórmula:",
+    "procent": "a% corresponde al % del área afectada (cabeza, brazos, torso, piernas) cubierta por psoriasis."
+  },
+  "disclaimer": {
+    "disclaimerTitle": "Descargo de responsabilidad",
+    "disclaimerText": "Los creadores de esta aplicación web declinan toda responsabilidad legal por su uso/aplicación. La aplicación web no es un dispositivo médico registrado. El usuario debe usar la aplicación web de manera crítica y es responsable de verificar que los cálculos se realicen correctamente.",
+    "MITLicenceTitle": "Licencia MIT",
+    "MITLicenceText": "Se concede permiso, de forma gratuita, a cualquier persona que obtenga una copia de este software y de los archivos de documentación asociados (el “Software”), para tratar el Software sin restricción, incluidos, entre otros, los derechos de usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender copias del Software, y permitir a las personas a quienes se les proporcione el Software que lo hagan, sujeto a las siguientes condiciones:",
+    "copyrightNotice": "El aviso de copyright anterior y este aviso de permiso deberán incluirse en todas las copias o partes sustanciales del Software.",
+    "software": "EL SOFTWARE SE PROPORCIONA “TAL CUAL”, SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO, ENTRE OTRAS, LAS GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑO O RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O DE OTRO TIPO, QUE SURJA DE, O EN CONEXIÓN CON, EL SOFTWARE O EL USO U OTROS TRATOS EN EL SOFTWARE.",
+    "CCBYTitle": "CC-BY 4.0",
+    "youAreFreeTo": "Eres libre de:",
+    "youAreFreeToFirst": "Compartir: copiar y redistribuir el material en cualquier medio o formato para cualquier propósito, incluso comercial.",
+    "youAreFreeToSecond": "Adaptar: remezclar, transformar y crear a partir del material para cualquier propósito, incluso comercial.",
+    "youAreFreeToThird": "El licenciante no puede revocar estas libertades mientras cumplas los términos de la licencia.",
+    "underTheFollowing": "Bajo los siguientes términos:",
+    "underTheFollowingFirst": "Atribución: debes dar <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-appropriate-credit' target='_blank'>crédito apropiado</a>, proporcionar un enlace a la licencia e <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-indicate-changes' target='_blank'>indicar si se realizaron cambios</a>. Puedes hacerlo de cualquier manera razonable, pero no de una forma que sugiera que el licenciante te respalda a ti o a tu uso.",
+    "underTheFollowingSecond": "Sin restricciones adicionales: no puedes aplicar términos legales ni <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-technological-measures' target='_blank'>medidas tecnológicas</a> que restrinjan legalmente a otros hacer algo que la licencia permite.",
+    "notices": "Avisos:",
+    "noticesFirst": "No tienes que cumplir la licencia para los elementos del material que se encuentren en el dominio público o cuando tu uso esté permitido por una <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-exception-or-limitation' target='_blank'>excepción o limitación</a> aplicable.",
+    "noticesSecond": "No se ofrecen garantías. La licencia puede no darte todos los permisos necesarios para tu uso previsto. Por ejemplo, otros derechos como los de <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-publicity-privacy-or-moral-rights' target='_blank'>publicidad, privacidad o derechos morales</a> pueden limitar cómo usas el material."
+  }
+}
