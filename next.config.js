@@ -1,18 +1,17 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/dev-psocalc" : "";
+
 const nextConfig = {
-  i18n: {
-    locales: ["sv", "en", "nl"],
-    defaultLocale: "sv",
-    localeDetection: false,
+  output: "export",
+  trailingSlash: true,
+  basePath,
+  assetPrefix: basePath,
+  images: {
+    unoptimized: true,
   },
-  async redirects() {
-    return [
-      {
-        source: "/robots.txt",
-        destination: "/api/robots",
-        permanent: true,
-      },
-    ];
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
   webpack: (config, { isServer }) => {
     config.cache = false;
