@@ -40,7 +40,19 @@
     "generalInfoButton": "Allmän info",
     "mathematicalFoundationButton": "Uträkningsprinciper",
     "disclaimerButton": "Disclaimer",
-    "chooseHandsHere": "Välj antal händer"
+    "chooseHandsHere": "Välj antal händer",
+    "notAssessed": "Ej bedömd",
+    "areasAssessed": "{done} av {total} områden bedömda",
+    "total": "Totalt",
+    "newAssessment": "Ny bedömning",
+    "confirmReset": "Vill du nollställa alla värden och börja en ny bedömning?",
+    "seeResultsHint": "Bedöm minst ett område och tryck Klar för att se resultat.",
+    "showBack": "Visa baksida",
+    "showFront": "Visa framsida",
+    "palmsSummary": "≈ {bsa} % av kroppsytan · {percent} % av området",
+    "info": "Information",
+    "close": "Stäng",
+    "basedOnAreas": "Baserat på {done} av {total} bedömda områden"
   },
   "generalInfo": {
     "backgroundTitle": "Om PsoCalc",

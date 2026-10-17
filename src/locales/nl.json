@@ -40,7 +40,19 @@
     "generalInfoButton": "Algemene info",
     "mathematicalFoundationButton": "Wiskundige basis",
     "disclaimerButton": "Disclaimer",
-    "chooseHandsHere": "Kies aantal handen"
+    "chooseHandsHere": "Kies aantal handen",
+    "notAssessed": "Niet beoordeeld",
+    "areasAssessed": "{done} van {total} gebieden beoordeeld",
+    "total": "Totaal",
+    "newAssessment": "Nieuwe beoordeling",
+    "confirmReset": "Alle waarden wissen en een nieuwe beoordeling starten?",
+    "seeResultsHint": "Beoordeel minstens één gebied en druk op Klaar om resultaten te zien.",
+    "showBack": "Toon achterkant",
+    "showFront": "Toon voorkant",
+    "palmsSummary": "≈ {bsa} % van het lichaamsoppervlak · {percent} % van het gebied",
+    "info": "Informatie",
+    "close": "Sluiten",
+    "basedOnAreas": "Gebaseerd op {done} van {total} beoordeelde gebieden"
   },
   "generalInfo": {
     "backgroundTitle": "Over PsoCalc",

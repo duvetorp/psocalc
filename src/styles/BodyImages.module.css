@@ -1,140 +1,93 @@
 .imageContainer {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .imageSection {
-  text-align: center;
+  padding-top: 16px;
 }
 
 .imageTitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0 10px 0;
-}
-
-.imageTitle h2 {
-  font-size: 12px;
-  color: #202224;
-  font-weight: 700;
-}
-
-.imageTitleLine {
-  height: 1px;
-  width: 50px;
-  background: #202224;
-  margin: 0 20px 0 20px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
 }
 
 .imageGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
 }
 
-.imageGrid img {
-  border-radius: 50%;
-  margin: 3px 0 0 0;
-}
-
-.imageWrapperContainer {
+.option {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 6px;
+  padding: 6px 2px 8px;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
 }
 
-.imageWrapperContainer img {
-  object-fit: cover;
+.option:hover {
+  background: var(--surface-2);
 }
 
 .imageWrapper {
-  cursor: pointer;
-  border: 2px solid transparent;
+  display: block;
+  width: 100%;
+  max-width: 72px;
+  aspect-ratio: 1;
   border-radius: 50%;
-  height: 70px;
-  width: 70px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.optionLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.optionIndex {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
 }
 
 .selected {
-  border: 1px dotted #000;
-  transform: scale(1.1);
-  border-radius: 50%;
+  background: var(--accent-soft);
+  border-color: var(--accent);
 }
 
-.bodyTextArea {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 2px solid #eeeeee;
-  width: 100%;
+.selected:hover {
+  background: var(--accent-soft);
 }
 
-.bodyTextArea {
-  height: 120px;
-  flex-direction: column;
-  gap: 5px;
+.selected .imageWrapper {
+  box-shadow: 0 0 0 3px var(--accent);
 }
 
-.bodyTextArea h1 {
-  font-size: 16px;
-}
-
-.handText {
-  text-align: center;
-  font-size: 12px;
-}
-
-.textChangeBodyContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px 0 0 0;
-}
-
-.textChangeBody {
-  width: 70%;
-  text-align: center;
-}
-
-.changeSide {
-  width: 20%;
-}
-
-.changeSide img {
-  cursor: pointer;
-}
-
-.imageTitleText {
-  font-size: 12px;
-  font-weight: 700;
-  color: #202224;
-  margin-top: 10px;
-}
-
-@media (min-width: 1200px) {
-  .imageContainer {
-    width: 480px;
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .bodyTextArea {
-    border-top: none;
-    gap: 10px;
-  }
-
-  .bodyTextArea h1 {
-    font-size: 22px;
-    font-weight: 500;
-  }
-
-  .handText {
-    font-size: 12px;
-  }
-
-  .textChangeBodyContainer {
-    padding: 0;
-  }
+.selected .optionLabel,
+.selected .optionIndex {
+  color: var(--accent);
 }

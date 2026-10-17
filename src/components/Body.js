@@ -1,131 +1,106 @@
-import { useState } from "react";
-import Image from "next/image";
+import { useId } from "react";
 import Styles from "@/styles/Body.module.css";
-import { useArea } from "@/context/AreaContext";
-import useMaxSizes from "@/hooks/useMaxSizes";
-import useAreaStyles from "@/hooks/useAreaStyles";
-import useDeviceType from "@/hooks/useDeviceType";
-import BackButton from "@/components/BackButton";
-import InfoPopup from "@/components/InfoPopup";
+import { getBodySide, REDNESS_COLORS } from "@/lib/bodyRegions";
 import { assetPath } from "@/lib/assetPath";
 
-const Body = ({ isFrontBody, id, showThis, changeSide }) => {
-  const { areas } = useArea();
-  const maxSizes = useMaxSizes();
-  const isMobile = useDeviceType();
-  const [isOpen, setIsOpen] = useState(false);
+// Ritar kroppen och fyller vald kroppsdel från mitten och utåt
+// i proportion till hur stor andel av området som är drabbat.
+const Body = ({ area, side = "front" }) => {
+  const uid = useId().replace(/:/g, "");
+  const body = getBodySide(side);
+  const region = body.regions[area.id];
 
-  const selectedArea = areas.find((item) => item.id === id) || { value: 1 };
+  if (!region) return null;
 
-  const baseSize = maxSizes[id] || {};
-  const hasSides = baseSize.left && baseSize.right;
-  const sides = hasSides ? ["left", "right"] : [null];
+  const coverage = Math.min(area.value / area.palms, 1);
+  const regionHeight = region.bottom - region.top;
+  const center = region.top + regionHeight / 2;
+  const fillHeight = regionHeight * coverage;
 
-  const getSizeObj = (side) =>
-    side ? { ...baseSize, ...baseSize[side] } : { ...baseSize };
-
-  const getPentagons = (sizeObj) =>
-    sizeObj.pentagonPositions?.map((pos) => ({
-      ...pos,
-      size: `${sizeObj.scalingSize}px`,
-    })) || [];
-
-  const openPopup = () => {
-    setIsOpen((prev) => !prev);
+  const ids = {
+    silhouette: `silhouette-${uid}`,
+    region: `region-${uid}`,
+    scaling: `scaling-${uid}`,
+    thickness: `thickness-${uid}`,
   };
 
-  // Använd den första sidan (eller det enda objektet) för bodyPositionStyle
-  const previewSize = getSizeObj(sides[0]);
-  const { bodyPositionStyle } = useAreaStyles(selectedArea, id, previewSize);
-
   return (
-    <div className={Styles.body}>
-      <div
-        className={
-          showThis
-            ? Styles.backButtonContainer
-            : Styles.backButtonContainerHidden
-        }
-      >
-        {!isMobile && (
-          <Image
-            onClick={changeSide}
-            src={assetPath("/images/change_side.png")}
-            alt="hands"
-            width={40}
-            height={40}
-          />
-        )}
-        {isMobile && (
-          <>
-            <BackButton />
-            <Image
-              src={assetPath("/images/info.png")}
-              alt="Back"
-              width={35}
-              height={36}
-              onClick={() => openPopup()}
-            />
-          </>
-        )}
-
-        {isOpen && <InfoPopup openPopup={openPopup} isOpen={isOpen} />}
-      </div>
-
-      {showThis ? (
-        <div
-          className={
-            isFrontBody
-              ? `${Styles.bodyImageContainer} ${Styles.bodyImageFront}`
-              : `${Styles.bodyImageContainer} ${Styles.bodyImageBack}`
-          }
-          style={bodyPositionStyle}
+    <svg
+      className={Styles.figure}
+      viewBox={`0 0 ${body.width} ${body.height}`}
+      role="img"
+      aria-label={`${Math.round(coverage * 100)} %`}
+    >
+      <defs>
+        <clipPath id={ids.silhouette}>
+          <path d={body.silhouette} />
+        </clipPath>
+        <clipPath id={ids.region}>
+          <path d={region.d} />
+        </clipPath>
+        <pattern
+          id={ids.scaling}
+          width="9"
+          height="9"
+          patternUnits="userSpaceOnUse"
         >
-          {sides.map((side) => {
-            const sizeObj = getSizeObj(side);
-            const pentagons = getPentagons(sizeObj);
-            const { rednessStyle, thicknessStyle, scalingStyle } =
-              useAreaStyles(selectedArea, id, sizeObj);
+          <path d="M1 2 l2 -1 l1 2 l-2 1 Z M5.5 6 l2 0.5 l-0.5 1.8 l-1.8 -0.6 Z" fill="#fff" />
+        </pattern>
+        <pattern
+          id={ids.thickness}
+          width="6"
+          height="6"
+          patternUnits="userSpaceOnUse"
+          patternTransform="rotate(45)"
+        >
+          <line x1="0" y1="0" x2="0" y2="6" stroke="#5c0f17" strokeWidth="2" />
+        </pattern>
+      </defs>
 
-            return (
-              <div key={side || "single"}>
-                <div
-                  className={Styles.bodyImageAreaRedness}
-                  style={selectedArea.value > 0 ? rednessStyle : null}
-                >
-                  {pentagons.map((pentagon, index) => (
-                    <div
-                      key={index}
-                      className={Styles.pentagon}
-                      style={{
-                        top: pentagon.top,
-                        left: pentagon.left,
-                        width: pentagon.size,
-                        height: pentagon.size,
-                        position: "absolute",
-                        opacity: scalingStyle.opacity,
-                      }}
-                    ></div>
-                  ))}
-                </div>
-                <div
-                  className={Styles.bodyImageAreaThickness}
-                  style={selectedArea.value > 0 ? thicknessStyle : null}
-                ></div>
-              </div>
-            );
-          })}
-        </div>
-      ) : (
-        <Image
-          className={Styles.bodyImage}
-          src={assetPath("/images/bodies-2.svg")}
-          alt="hero"
-          width={163}
-          height={359}
-        />
-      )}
-    </div>
+      <image
+        href={assetPath(body.image)}
+        width={body.width}
+        height={body.height}
+      />
+
+      <g clipPath={`url(#${ids.silhouette})`}>
+        <g clipPath={`url(#${ids.region})`}>
+          {/* Markerar vilket område som bedöms */}
+          <rect
+            className={Styles.regionHighlight}
+            width={body.width}
+            height={body.height}
+          />
+          <g className={Styles.fill}>
+            <rect
+              x="0"
+              y={center - fillHeight / 2}
+              width={body.width}
+              height={fillHeight}
+              fill={REDNESS_COLORS[area.redness] || REDNESS_COLORS[0]}
+            />
+            <rect
+              x="0"
+              y={center - fillHeight / 2}
+              width={body.width}
+              height={fillHeight}
+              fill={`url(#${ids.thickness})`}
+              opacity={area.thickness * 0.09}
+            />
+          </g>
+          <g>
+            <rect
+              x="0"
+              y={center - fillHeight / 2}
+              width={body.width}
+              height={fillHeight}
+              fill={`url(#${ids.scaling})`}
+              opacity={area.scaling / 4}
+            />
+          </g>
+        </g>
+      </g>
+    </svg>
   );
 };
 

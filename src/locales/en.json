@@ -40,7 +40,19 @@
     "generalInfoButton": "General info",
     "mathematicalFoundationButton": "Calculations",
     "disclaimerButton": "Disclaimer",
-    "chooseHandsHere": "Choose number of hands"
+    "chooseHandsHere": "Choose number of hands",
+    "notAssessed": "Not assessed",
+    "areasAssessed": "{done} of {total} areas assessed",
+    "total": "Total",
+    "newAssessment": "New assessment",
+    "confirmReset": "Reset all values and start a new assessment?",
+    "seeResultsHint": "Assess at least one area and press Done to see results.",
+    "showBack": "Show back",
+    "showFront": "Show front",
+    "palmsSummary": "≈ {bsa} % of body surface · {percent} % of the area",
+    "info": "Information",
+    "close": "Close",
+    "basedOnAreas": "Based on {done} of {total} assessed areas"
   },
   "generalInfo": {
     "backgroundTitle": "About PsoCalc",

@@ -5,47 +5,34 @@ import {
   faCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useArea } from "../context/AreaContext";
-import PasiComponent from "./PasiComponent";
-import ZPasiComponent from "./ZPasiComponent";
-import BsaComponent from "./BsaComponent";
+import { useTranslation } from "@/context/TranslationContext";
+import { getTotalScore, formatScore } from "@/lib/scores";
 
-const ChooseArea = ({ id, title, calculation }) => {
+const ChooseArea = ({ area, title, calculation }) => {
   const router = useRouter();
-  const { areas } = useArea();
-
-  const selectedArea = areas.find((item) => item.id === id) || { value: 0 };
-
-  const chooseAreaClick = () => {
-    router.push(`/${id}`);
-  };
+  const { t } = useTranslation();
 
   return (
-    <div className={Styles.chooseArea} onClick={chooseAreaClick}>
-      <div className={Styles.chooseAreaItem}>
-        <h2>{title}</h2>
-      </div>
-      <div className={Styles.chooseAreaItem}>
-        {calculation === "PASI" && (
-          <PasiComponent area={selectedArea} total={false} />
+    <button
+      type="button"
+      className={`${Styles.chooseArea} ${area.done ? Styles.done : ""}`}
+      onClick={() => router.push(`/${area.id}`)}
+    >
+      <span className={Styles.title}>{title}</span>
+      <span className={Styles.score}>
+        {area.done ? (
+          formatScore(calculation, getTotalScore(calculation, [area]))
+        ) : (
+          <span className={Styles.notAssessed}>
+            {t.translation.notAssessed}
+          </span>
         )}
-        {calculation === "zPASI" && (
-          <ZPasiComponent area={selectedArea} total={false} />
-        )}
-        {calculation === "BSA" && (
-          <BsaComponent area={selectedArea} total={false} />
-        )}
-      </div>
-      <div className={Styles.chooseAreaItem}>
-        <FontAwesomeIcon
-          icon={selectedArea.done ? faCircleCheck : faChevronRight}
-          style={{
-            color: selectedArea.done ? "#46AC22" : "#626262",
-            fontSize: selectedArea.done ? "35px" : "20px",
-          }}
-        />
-      </div>
-    </div>
+      </span>
+      <FontAwesomeIcon
+        className={Styles.icon}
+        icon={area.done ? faCircleCheck : faChevronRight}
+      />
+    </button>
   );
 };
 

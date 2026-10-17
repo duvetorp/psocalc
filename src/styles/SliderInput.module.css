@@ -1,43 +1,55 @@
 .sliderInput {
-  text-align: center;
-  padding: 10px;
-  width: 100%;
-}
-
-.sliderInputContainer {
   display: flex;
   align-items: center;
-  background: #e9eef4;
-  padding: 20px 10px;
-  border-radius: 15px;
-  width: 100%;
-  margin: auto;
-  gap: 10px;
-  height: 32px;
+  gap: 12px;
+  padding: 18px 12px 8px;
+  background: var(--surface-2);
+  border-radius: var(--radius);
 }
 
-.sliderInputDecreaseButton,
-.sliderInputIncreaseButton {
-  background: #cbd5e1;
-  border: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  flex-shrink: 0;
-  color: #000;
-}
-
-.sliderInputDecreaseWrapper {
+.track {
   flex: 1;
   position: relative;
-  padding: 0 30px;
+  padding: 0 18px;
 }
 
-@media (min-width: 1200px) {
-  .sliderInput {
-    padding: 0;
-  }
+.handle {
+  width: 48px !important;
+  height: 50px !important;
+  margin-top: -21px !important;
+  transform: translateX(-50%) !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  cursor: grab;
+}
+
+.handle:active {
+  cursor: grabbing;
+}
+
+.handle img {
+  pointer-events: none;
+  filter: drop-shadow(0 2px 3px rgba(16, 24, 40, 0.25));
+}
+
+.handleValue {
+  position: absolute;
+  top: 66%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text);
+  pointer-events: none;
+}
+
+.scale {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px -18px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
 }

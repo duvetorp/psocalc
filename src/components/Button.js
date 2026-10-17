@@ -1,31 +1,22 @@
 import Styles from "@/styles/Button.module.css";
-import { useRouter } from "next/router";
-import useDeviceType from "@/hooks/useDeviceType";
 
-const Button = ({ lockButton, textButton, buttonUrl, shouldLock, width }) => {
-  const router = useRouter();
-  const isMobile = useDeviceType();
-
-  const routeButton = () => {
-    router.push(buttonUrl);
-  };
-
-  return (
-    <div className={Styles.buttonContainer}>
-      <div
-        className={Styles.button}
-        style={{ width: !isMobile ? `${width}px` : "100%" }}
-        onClick={() => {
-          routeButton();
-          if (shouldLock) {
-            lockButton();
-          }
-        }}
-      >
-        {textButton}
-      </div>
-    </div>
-  );
-};
+const Button = ({
+  children,
+  onClick,
+  variant = "primary",
+  disabled = false,
+  fullWidth = false,
+}) => (
+  <button
+    type="button"
+    className={`${Styles.button} ${Styles[variant]} ${
+      fullWidth ? Styles.fullWidth : ""
+    }`}
+    onClick={onClick}
+    disabled={disabled}
+  >
+    {children}
+  </button>
+);
 
 export default Button;
