@@ -14,11 +14,6 @@
   transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
 }
 
-.chooseArea:hover {
-  border-color: var(--accent);
-  background: var(--accent-soft);
-}
-
 .title {
   font-size: 18px;
   font-weight: 700;
@@ -59,5 +54,13 @@
 
   .score {
     font-size: 22px;
+  }
+}
+
+/* Hover bara på enheter med mus – annars fastnar läget efter tryck på touch */
+@media (hover: hover) {
+  .chooseArea:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
   }
 }

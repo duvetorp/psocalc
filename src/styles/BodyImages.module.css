@@ -36,10 +36,6 @@
   transition: background 0.15s, border-color 0.15s;
 }
 
-.option:hover {
-  background: var(--surface-2);
-}
-
 .imageWrapper {
   display: block;
   width: 100%;
@@ -79,10 +75,6 @@
   border-color: var(--accent);
 }
 
-.selected:hover {
-  background: var(--accent-soft);
-}
-
 .selected .imageWrapper {
   box-shadow: 0 0 0 3px var(--accent);
 }
@@ -90,4 +82,15 @@
 .selected .optionLabel,
 .selected .optionIndex {
   color: var(--accent);
+}
+
+/* Hover bara på enheter med mus – annars fastnar läget efter tryck på touch */
+@media (hover: hover) {
+  .option:hover {
+    background: var(--surface-2);
+  }
+
+  .selected:hover {
+    background: var(--accent-soft);
+  }
 }

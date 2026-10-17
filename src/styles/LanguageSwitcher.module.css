@@ -26,10 +26,6 @@
   cursor: pointer;
 }
 
-.trigger:hover {
-  background: rgba(16, 24, 40, 0.6);
-}
-
 .trigger img {
   border-radius: 2px;
 }
@@ -67,8 +63,19 @@
   cursor: pointer;
 }
 
-.dropdownItem:hover,
 .dropdownItem[aria-selected="true"] {
   background: var(--accent-soft);
   color: var(--accent);
+}
+
+/* Hover bara på enheter med mus – annars fastnar läget efter tryck på touch */
+@media (hover: hover) {
+  .trigger:hover {
+    background: rgba(16, 24, 40, 0.6);
+  }
+
+  .dropdownItem:hover {
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
 }

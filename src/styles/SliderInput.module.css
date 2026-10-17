@@ -11,6 +11,13 @@
   flex: 1;
   position: relative;
   padding: 0 18px;
+  /* Vågräta drag styr reglaget, lodräta scrollar sidan (touch) */
+  touch-action: pan-y;
+}
+
+.track :global(.rc-slider),
+.handle {
+  touch-action: pan-y;
 }
 
 .handle {

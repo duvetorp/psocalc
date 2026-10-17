@@ -11,8 +11,14 @@ export const getTotalScore = (calculation, areas) => {
   return usePasiCalculation(areas).totalPasi;
 };
 
-export const formatScore = (calculation, score) =>
-  calculation === "BSA" ? `${score} %` : `${score}`;
+// Tal med språkets decimaltecken (0,5 på svenska, 0.5 på engelska)
+export const formatNumber = (value, locale) =>
+  Number(value).toLocaleString(locale, { maximumFractionDigits: 2 });
+
+export const formatScore = (calculation, score, locale) =>
+  calculation === "BSA"
+    ? `${formatNumber(score, locale)} %`
+    : formatNumber(score, locale);
 
 // Enkel interpolering av "{nyckel}" i översättningssträngar
 export const format = (text, values) =>

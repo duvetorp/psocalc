@@ -10,7 +10,7 @@ import Toolbar from "@/components/Toolbar";
 import { CALCULATIONS, getTotalScore, formatScore, format } from "@/lib/scores";
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const { areas, doneAreas, resetAreas } = useArea();
   const router = useRouter();
 
@@ -83,7 +83,8 @@ const Home = () => {
                 {hasDone
                   ? formatScore(
                       calculation,
-                      getTotalScore(calculation, doneAreas)
+                      getTotalScore(calculation, doneAreas),
+                      locale
                     )
                   : "–"}
               </strong>

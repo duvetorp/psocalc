@@ -53,7 +53,8 @@ const Results = () => {
               <span className={Styles.statValue}>
                 {formatScore(
                   calculation,
-                  getTotalScore(calculation, doneAreas)
+                  getTotalScore(calculation, doneAreas),
+                  locale
                 )}
               </span>
               <span className={Styles.statLabel}>{calculation}</span>

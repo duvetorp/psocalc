@@ -10,7 +10,7 @@ import { getTotalScore, formatScore } from "@/lib/scores";
 
 const ChooseArea = ({ area, title, calculation }) => {
   const router = useRouter();
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   return (
     <button
@@ -21,7 +21,7 @@ const ChooseArea = ({ area, title, calculation }) => {
       <span className={Styles.title}>{title}</span>
       <span className={Styles.score}>
         {area.done ? (
-          formatScore(calculation, getTotalScore(calculation, [area]))
+          formatScore(calculation, getTotalScore(calculation, [area]), locale)
         ) : (
           <span className={Styles.notAssessed}>
             {t.translation.notAssessed}

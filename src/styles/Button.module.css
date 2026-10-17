@@ -33,19 +33,10 @@
   opacity: 1;
 }
 
-.primary:hover:not(:disabled) {
-  background: var(--accent-hover);
-}
-
 .secondary {
   background: var(--surface);
   border-color: var(--border);
   color: var(--text);
-}
-
-.secondary:hover:not(:disabled) {
-  border-color: var(--accent);
-  color: var(--accent);
 }
 
 .fullWidth {
@@ -55,5 +46,17 @@
 @media (max-width: 600px) {
   .button {
     width: 100%;
+  }
+}
+
+/* Hover bara på enheter med mus – annars fastnar läget efter tryck på touch */
+@media (hover: hover) {
+  .primary:hover:not(:disabled) {
+    background: var(--accent-hover);
+  }
+
+  .secondary:hover:not(:disabled) {
+    border-color: var(--accent);
+    color: var(--accent);
   }
 }

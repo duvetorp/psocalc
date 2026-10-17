@@ -20,7 +20,7 @@ import { useArea } from "@/context/AreaContext";
 import BackButton from "@/components/BackButton";
 import InfoPopup from "@/components/InfoPopup";
 import ConfirmDialog from "@/components/ConfirmDialog";
-import { format } from "@/lib/scores";
+import { format, formatNumber } from "@/lib/scores";
 import sv from "@/locales/sv.json";
 
 // Info-rutan visas automatiskt vid första områdesbesöket under sessionen
@@ -30,7 +30,7 @@ let hasShownInfo = false;
 const AreaEditor = ({ savedArea, category }) => {
   const router = useRouter();
   const { areas, saveArea } = useArea();
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const [draft, setDraft] = useState(savedArea);
   const [side, setSide] = useState("front");
   const actionsRef = useRef(null);
@@ -103,7 +103,7 @@ const AreaEditor = ({ savedArea, category }) => {
     actions?.querySelector("button")?.focus({ preventScroll: true });
   };
 
-  const bsa = (draft.value * 0.5).toFixed(1).replace(/\.0$/, "");
+  const bsa = formatNumber(draft.value * 0.5, locale);
   const areaPercent = Math.round((draft.value / draft.palms) * 100);
 
   return (

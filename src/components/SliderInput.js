@@ -5,11 +5,14 @@ import Styles from "@/styles/SliderInput.module.css";
 import IconButton from "@/components/IconButton";
 import Image from "next/image";
 import { assetPath } from "@/lib/assetPath";
+import { formatNumber } from "@/lib/scores";
+import { useTranslation } from "@/context/TranslationContext";
 
 const STEP = 0.5;
 
 // Antal handflator (PSA) för ett område, i steg om 0,5
 const SliderInput = ({ value, max, label, onChange }) => {
+  const { locale } = useTranslation();
   const clamp = (next) =>
     Math.min(Math.max(Math.round(next / STEP) * STEP, 0), max);
 
@@ -45,7 +48,9 @@ const SliderInput = ({ value, max, label, onChange }) => {
                 height={50}
                 draggable={false}
               />
-              <span className={Styles.handleValue}>{value}</span>
+              <span className={Styles.handleValue}>
+                {formatNumber(value, locale)}
+              </span>
             </div>
           )}
         />

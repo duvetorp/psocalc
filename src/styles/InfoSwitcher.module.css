@@ -32,10 +32,6 @@
   transition: background 0.15s, color 0.15s;
 }
 
-.infoButtons button:hover {
-  color: var(--accent);
-}
-
 .infoButtons button.activeButton {
   background: var(--accent);
   color: #fff;
@@ -56,5 +52,12 @@
   .infoButtons button {
     padding: 6px 14px;
     font-size: 14px;
+  }
+}
+
+/* Hover bara på enheter med mus – annars fastnar läget efter tryck på touch */
+@media (hover: hover) {
+  .infoButtons button:hover {
+    color: var(--accent);
   }
 }

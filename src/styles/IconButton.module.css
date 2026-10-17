@@ -15,14 +15,17 @@
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 
-.iconButton:hover {
-  background: var(--accent-soft);
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
 .withText {
   padding: 0 14px;
   font-size: 14px;
   font-weight: 700;
+}
+
+/* Hover bara på enheter med mus – annars fastnar läget efter tryck på touch */
+@media (hover: hover) {
+  .iconButton:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
 }
