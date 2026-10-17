@@ -38,6 +38,35 @@
   justify-content: center;
 }
 
+.noPsoriasis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 16px;
+  padding: 0 16px;
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.noPsoriasis svg {
+  color: var(--success);
+}
+
+.noPsoriasis:hover {
+  border-color: var(--success);
+  background: #edf7ef;
+  color: var(--success);
+}
+
 .section {
   padding: 16px 0 4px;
 }

@@ -56,7 +56,8 @@
     "palmHint": "1 palm = the patient's palm without fingers ≈ 0.5 % of the body surface. {max} palms cover the whole area.",
     "buttocksHint": "The buttocks count as part of the legs.",
     "doneNext": "Done – next: {area}",
-    "doneResults": "Done – see results"
+    "doneResults": "Done – see results",
+    "noPsoriasis": "No psoriasis here"
   },
   "generalInfo": {
     "backgroundTitle": "About PsoCalc",

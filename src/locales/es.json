@@ -56,7 +56,8 @@
     "palmHint": "1 palma = la palma del paciente sin dedos ≈ 0,5 % de la superficie corporal. {max} palmas cubren toda el área.",
     "buttocksHint": "Los glúteos forman parte de las piernas.",
     "doneNext": "Listo – siguiente: {area}",
-    "doneResults": "Listo – ver resultados"
+    "doneResults": "Listo – ver resultados",
+    "noPsoriasis": "Sin psoriasis aquí"
   },
   "generalInfo": {
     "backgroundTitle": "Acerca de PsoCalc",

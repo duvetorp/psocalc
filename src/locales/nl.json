@@ -56,7 +56,8 @@
     "palmHint": "1 handpalm = de handpalm van de patiënt zonder vingers ≈ 0,5 % van het lichaamsoppervlak. {max} handpalmen bedekken het hele gebied.",
     "buttocksHint": "De billen horen bij de benen.",
     "doneNext": "Klaar – volgende: {area}",
-    "doneResults": "Klaar – bekijk resultaten"
+    "doneResults": "Klaar – bekijk resultaten",
+    "noPsoriasis": "Geen psoriasis hier"
   },
   "generalInfo": {
     "backgroundTitle": "Over PsoCalc",

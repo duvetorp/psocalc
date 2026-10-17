@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faBan,
   faCircleInfo,
   faHand,
   faRotate,
@@ -31,6 +32,7 @@ const AreaEditor = ({ savedArea, category }) => {
   const { t } = useTranslation();
   const [draft, setDraft] = useState(savedArea);
   const [side, setSide] = useState("front");
+  const actionsRef = useRef(null);
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
   useEffect(() => {
@@ -57,6 +59,14 @@ const AreaEditor = ({ savedArea, category }) => {
     router.push(nextCategory ? `/${nextCategory.id}` : "/results");
   };
 
+  // Nollställer området och scrollar ner till Klar-knappen för bekräftelse
+  const handleNoPsoriasis = () => {
+    updateDraft({ value: 0, redness: 0, thickness: 0, scaling: 0 });
+    const actions = actionsRef.current;
+    actions?.scrollIntoView({ behavior: "smooth", block: "center" });
+    actions?.querySelector("button")?.focus({ preventScroll: true });
+  };
+
   const bsa = (draft.value * 0.5).toFixed(1).replace(/\.0$/, "");
   const areaPercent = Math.round((draft.value / draft.palms) * 100);
 
@@ -79,6 +89,15 @@ const AreaEditor = ({ savedArea, category }) => {
           </div>
 
           <div className={Styles.editor}>
+            <button
+              type="button"
+              className={Styles.noPsoriasis}
+              onClick={handleNoPsoriasis}
+            >
+              <FontAwesomeIcon icon={faBan} />
+              {t.translation.noPsoriasis}
+            </button>
+
             <section className={Styles.section}>
               <p className={Styles.handText}>{t.translation.handText}</p>
               <SliderInput
@@ -109,7 +128,7 @@ const AreaEditor = ({ savedArea, category }) => {
 
             <BodyImages area={draft} onSelect={updateDraft} />
 
-            <div className={Layout.actions}>
+            <div className={Layout.actions} ref={actionsRef}>
               <Button fullWidth onClick={handleDone}>
                 {nextCategory
                   ? format(t.translation.doneNext, { area: nextCategory.title })

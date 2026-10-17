@@ -56,7 +56,8 @@
     "palmHint": "1 handflata = patientens handflata utan fingrar ≈ 0,5 % av kroppsytan. {max} handflator täcker hela området.",
     "buttocksHint": "Rumpan räknas till ben.",
     "doneNext": "Klar – nästa: {area}",
-    "doneResults": "Klar – se resultat"
+    "doneResults": "Klar – se resultat",
+    "noPsoriasis": "Ingen psoriasis här"
   },
   "generalInfo": {
     "backgroundTitle": "Om PsoCalc",
