@@ -57,7 +57,11 @@
     "buttocksHint": "Los glúteos forman parte de las piernas.",
     "doneNext": "Listo – siguiente: {area}",
     "doneResults": "Listo – ver resultados",
-    "noPsoriasis": "Sin psoriasis aquí"
+    "noPsoriasis": "Sin psoriasis aquí",
+    "unsavedTitle": "Cambios sin guardar",
+    "unsavedText": "Has cambiado valores de esta área sin pulsar Listo. Si vuelves atrás, se perderán los cambios.",
+    "keepEditing": "Seguir editando",
+    "discardChanges": "Descartar cambios"
   },
   "generalInfo": {
     "backgroundTitle": "Acerca de PsoCalc",

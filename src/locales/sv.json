@@ -57,7 +57,11 @@
     "buttocksHint": "Rumpan räknas till ben.",
     "doneNext": "Klar – nästa: {area}",
     "doneResults": "Klar – se resultat",
-    "noPsoriasis": "Ingen psoriasis här"
+    "noPsoriasis": "Ingen psoriasis här",
+    "unsavedTitle": "Osparade ändringar",
+    "unsavedText": "Du har ändrat värden för det här området utan att trycka Klar. Om du går tillbaka försvinner ändringarna.",
+    "keepEditing": "Fortsätt redigera",
+    "discardChanges": "Kasta ändringar"
   },
   "generalInfo": {
     "backgroundTitle": "Om PsoCalc",

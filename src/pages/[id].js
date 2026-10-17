@@ -19,6 +19,7 @@ import SliderInput from "@/components/SliderInput";
 import { useArea } from "@/context/AreaContext";
 import BackButton from "@/components/BackButton";
 import InfoPopup from "@/components/InfoPopup";
+import ConfirmDialog from "@/components/ConfirmDialog";
 import { format } from "@/lib/scores";
 import sv from "@/locales/sv.json";
 
@@ -33,6 +34,41 @@ const AreaEditor = ({ savedArea, category }) => {
   const [draft, setDraft] = useState(savedArea);
   const [side, setSide] = useState("front");
   const actionsRef = useRef(null);
+  const [isLeaveOpen, setIsLeaveOpen] = useState(false);
+
+  const isDirty = ["value", "redness", "thickness", "scaling"].some(
+    (key) => draft[key] !== savedArea[key]
+  );
+  const isDirtyRef = useRef(isDirty);
+  isDirtyRef.current = isDirty;
+
+  // Webbläsarens bakåt-knapp/svep och omladdning: inbyggd bekräftelse
+  useEffect(() => {
+    const ownState = window.history.state;
+    const onBeforeUnload = (event) => {
+      if (!isDirtyRef.current) return;
+      event.preventDefault();
+      event.returnValue = "";
+    };
+    window.addEventListener("beforeunload", onBeforeUnload);
+    router.beforePopState(() => {
+      if (!isDirtyRef.current || window.confirm(t.translation.unsavedText)) {
+        return true;
+      }
+      // Återställ adressen som webbläsaren redan har bytt
+      window.history.pushState(ownState, "", router.asPath);
+      return false;
+    });
+    return () => {
+      window.removeEventListener("beforeunload", onBeforeUnload);
+      router.beforePopState(() => true);
+    };
+  }, [router, t]);
+
+  const handleBack = () => {
+    if (isDirty) setIsLeaveOpen(true);
+    else router.push("/home");
+  };
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
   useEffect(() => {
@@ -76,7 +112,7 @@ const AreaEditor = ({ savedArea, category }) => {
         <div className={Styles.main}>
           <div className={Styles.toolbar}>
             <Toolbar
-              left={<BackButton />}
+              left={<BackButton onBack={handleBack} />}
               title={category.title}
               right={
                 <IconButton
@@ -153,6 +189,16 @@ const AreaEditor = ({ savedArea, category }) => {
       </div>
 
       {isInfoOpen && <InfoPopup onClose={() => setIsInfoOpen(false)} />}
+      {isLeaveOpen && (
+        <ConfirmDialog
+          title={t.translation.unsavedTitle}
+          text={t.translation.unsavedText}
+          cancelLabel={t.translation.keepEditing}
+          confirmLabel={t.translation.discardChanges}
+          onCancel={() => setIsLeaveOpen(false)}
+          onConfirm={() => router.push("/home")}
+        />
+      )}
     </div>
   );
 };

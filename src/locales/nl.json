@@ -57,7 +57,11 @@
     "buttocksHint": "De billen horen bij de benen.",
     "doneNext": "Klaar – volgende: {area}",
     "doneResults": "Klaar – bekijk resultaten",
-    "noPsoriasis": "Geen psoriasis hier"
+    "noPsoriasis": "Geen psoriasis hier",
+    "unsavedTitle": "Niet-opgeslagen wijzigingen",
+    "unsavedText": "U hebt waarden voor dit gebied gewijzigd zonder op Klaar te drukken. Als u teruggaat, gaan de wijzigingen verloren.",
+    "keepEditing": "Verder bewerken",
+    "discardChanges": "Wijzigingen verwerpen"
   },
   "generalInfo": {
     "backgroundTitle": "Over PsoCalc",

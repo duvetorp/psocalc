@@ -3,7 +3,8 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import IconButton from "@/components/IconButton";
 import { useTranslation } from "@/context/TranslationContext";
 
-const BackButton = () => {
+// `onBack` ersätter standardbeteendet, t.ex. för att först fråga om osparade ändringar
+const BackButton = ({ onBack }) => {
   const router = useRouter();
   const { t } = useTranslation();
 
@@ -12,7 +13,7 @@ const BackButton = () => {
   };
 
   return (
-    <IconButton icon={faArrowLeft} label={t.translation.back} onClick={back} />
+    <IconButton icon={faArrowLeft} label={t.translation.back} onClick={onBack || back} />
   );
 };
 

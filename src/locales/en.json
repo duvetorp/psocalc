@@ -57,7 +57,11 @@
     "buttocksHint": "The buttocks count as part of the legs.",
     "doneNext": "Done – next: {area}",
     "doneResults": "Done – see results",
-    "noPsoriasis": "No psoriasis here"
+    "noPsoriasis": "No psoriasis here",
+    "unsavedTitle": "Unsaved changes",
+    "unsavedText": "You have changed values for this area without pressing Done. If you go back, the changes will be lost.",
+    "keepEditing": "Keep editing",
+    "discardChanges": "Discard changes"
   },
   "generalInfo": {
     "backgroundTitle": "About PsoCalc",
