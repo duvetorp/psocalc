@@ -61,7 +61,8 @@
     "unsavedTitle": "Cambios sin guardar",
     "unsavedText": "Has cambiado valores de esta área sin pulsar Listo. Si vuelves atrás, se perderán los cambios.",
     "keepEditing": "Seguir editando",
-    "discardChanges": "Descartar cambios"
+    "discardChanges": "Descartar cambios",
+    "showScoreAs": "Mostrar puntuación como"
   },
   "generalInfo": {
     "backgroundTitle": "Acerca de PsoCalc",

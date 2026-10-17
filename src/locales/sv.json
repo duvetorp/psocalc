@@ -61,7 +61,8 @@
     "unsavedTitle": "Osparade ändringar",
     "unsavedText": "Du har ändrat värden för det här området utan att trycka Klar. Om du går tillbaka försvinner ändringarna.",
     "keepEditing": "Fortsätt redigera",
-    "discardChanges": "Kasta ändringar"
+    "discardChanges": "Kasta ändringar",
+    "showScoreAs": "Visa poäng som"
   },
   "generalInfo": {
     "backgroundTitle": "Om PsoCalc",

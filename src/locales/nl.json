@@ -61,7 +61,8 @@
     "unsavedTitle": "Niet-opgeslagen wijzigingen",
     "unsavedText": "U hebt waarden voor dit gebied gewijzigd zonder op Klaar te drukken. Als u teruggaat, gaan de wijzigingen verloren.",
     "keepEditing": "Verder bewerken",
-    "discardChanges": "Wijzigingen verwerpen"
+    "discardChanges": "Wijzigingen verwerpen",
+    "showScoreAs": "Score tonen als"
   },
   "generalInfo": {
     "backgroundTitle": "Over PsoCalc",

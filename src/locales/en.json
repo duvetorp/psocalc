@@ -61,7 +61,8 @@
     "unsavedTitle": "Unsaved changes",
     "unsavedText": "You have changed values for this area without pressing Done. If you go back, the changes will be lost.",
     "keepEditing": "Keep editing",
-    "discardChanges": "Discard changes"
+    "discardChanges": "Discard changes",
+    "showScoreAs": "Show score as"
   },
   "generalInfo": {
     "backgroundTitle": "About PsoCalc",

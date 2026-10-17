@@ -37,21 +37,6 @@ const Home = () => {
       <div className={Layout.card}>
         <Toolbar left={<BackButton />} title={t.translation.chooseArea} />
 
-        <div className={Styles.segmented} role="tablist">
-          {CALCULATIONS.map((type) => (
-            <button
-              type="button"
-              role="tab"
-              aria-selected={calculation === type}
-              key={type}
-              onClick={() => handleCalculationChange(type)}
-              className={calculation === type ? Styles.active : ""}
-            >
-              {type}
-            </button>
-          ))}
-        </div>
-
         <div className={Styles.areaList}>
           {t.categories.map((category) => (
             <ChooseArea
@@ -64,20 +49,46 @@ const Home = () => {
         </div>
 
         <div className={Styles.summary}>
-          <span className={Styles.progress}>
-            {format(t.translation.areasAssessed, {
-              done: doneAreas.length,
-              total: areas.length,
-            })}
-          </span>
-          <span className={Styles.total}>
-            {t.translation.total} {calculation}
-            <strong>
-              {hasDone
-                ? formatScore(calculation, getTotalScore(calculation, doneAreas))
-                : "–"}
-            </strong>
-          </span>
+          <div className={Styles.scoreType}>
+            <span id="score-type-label">{t.translation.showScoreAs}</span>
+            <div
+              className={Styles.segmented}
+              role="radiogroup"
+              aria-labelledby="score-type-label"
+            >
+              {CALCULATIONS.map((type) => (
+                <button
+                  type="button"
+                  role="radio"
+                  aria-checked={calculation === type}
+                  key={type}
+                  onClick={() => handleCalculationChange(type)}
+                  className={calculation === type ? Styles.active : ""}
+                >
+                  {type}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className={Styles.totalRow}>
+            <span className={Styles.progress}>
+              {format(t.translation.areasAssessed, {
+                done: doneAreas.length,
+                total: areas.length,
+              })}
+            </span>
+            <span className={Styles.total}>
+              {t.translation.total} {calculation}
+              <strong>
+                {hasDone
+                  ? formatScore(
+                      calculation,
+                      getTotalScore(calculation, doneAreas)
+                    )
+                  : "–"}
+              </strong>
+            </span>
+          </div>
         </div>
 
         <div className={Layout.actions}>
