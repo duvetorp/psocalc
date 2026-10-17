@@ -49,7 +49,7 @@
     "seeResultsHint": "Bedöm minst ett område och tryck Klar för att se resultat.",
     "showBack": "Visa baksida",
     "showFront": "Visa framsida",
-    "palmsSummary": "{bsa} % av kroppen · {percent} % av {area}",
+    "palmsSummary": "{percent} % av {area}",
     "info": "Information",
     "close": "Stäng",
     "basedOnAreas": "Baserat på {done} av {total} bedömda områden",

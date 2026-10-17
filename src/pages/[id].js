@@ -19,7 +19,7 @@ import { useArea } from "@/context/AreaContext";
 import BackButton from "@/components/BackButton";
 import InfoPopup from "@/components/InfoPopup";
 import ConfirmDialog from "@/components/ConfirmDialog";
-import { format, formatNumber } from "@/lib/scores";
+import { format } from "@/lib/scores";
 import useDeviceType from "@/hooks/useDeviceType";
 import sv from "@/locales/sv.json";
 
@@ -30,7 +30,7 @@ let hasShownInfo = false;
 const AreaEditor = ({ savedArea, category }) => {
   const router = useRouter();
   const { areas, saveArea } = useArea();
-  const { t, locale } = useTranslation();
+  const { t } = useTranslation();
   const [draft, setDraft] = useState(savedArea);
   const [side, setSide] = useState("front");
   const isMobile = useDeviceType();
@@ -104,7 +104,6 @@ const AreaEditor = ({ savedArea, category }) => {
     actions?.querySelector("button")?.focus({ preventScroll: true });
   };
 
-  const bsa = formatNumber(draft.value * 0.5, locale);
   const areaPercent = Math.round((draft.value / draft.palms) * 100);
 
   return (
@@ -157,7 +156,6 @@ const AreaEditor = ({ savedArea, category }) => {
                 onChange={(value) => updateDraft({ value })}
               >
                 {format(t.translation.palmsSummary, {
-                  bsa,
                   percent: areaPercent,
                   area: category.title.toLowerCase(),
                 })}

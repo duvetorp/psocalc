@@ -49,7 +49,7 @@
     "seeResultsHint": "Beoordeel minstens één gebied en druk op Klaar om resultaten te zien.",
     "showBack": "Toon achterkant",
     "showFront": "Toon voorkant",
-    "palmsSummary": "{bsa} % van het lichaam · {percent} % van {area}",
+    "palmsSummary": "{percent} % van {area}",
     "info": "Informatie",
     "close": "Sluiten",
     "basedOnAreas": "Gebaseerd op {done} van {total} beoordeelde gebieden",

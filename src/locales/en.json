@@ -49,7 +49,7 @@
     "seeResultsHint": "Assess at least one area and press Done to see results.",
     "showBack": "Show back",
     "showFront": "Show front",
-    "palmsSummary": "{bsa} % of the body · {percent} % of {area}",
+    "palmsSummary": "{percent} % of {area}",
     "info": "Information",
     "close": "Close",
     "basedOnAreas": "Based on {done} of {total} assessed areas",
