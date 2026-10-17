@@ -82,6 +82,22 @@ const reverseHip = (side) =>
     ? "C130 203 126 241.267 113.216 241.267 L106.465 241.267 C93.6803 241.267 89.6802 203 74.1803 200"
     : "C127.533 189.202 90.5 189 76.5 196";
 
+// Utsnitt (y-start i viewBox) för den inzoomade mobilvyn, samma som den
+// tidigare versionen: hela bredden men bara ZOOM_HEIGHT enheter på höjden
+export const ZOOM_HEIGHT = 263;
+const zoomTop = {
+  head: () => -40,
+  torso: () => 45,
+  arm: () => 45,
+  leg: (side) => side.height - ZOOM_HEIGHT + 6,
+};
+
+export const getZoomViewBox = (sideName, regionId) => {
+  const side = sides[sideName] || sides.front;
+  const top = (zoomTop[regionId] || zoomTop.torso)(side);
+  return `0 ${top} ${side.width} ${ZOOM_HEIGHT}`;
+};
+
 export const getBodySide = (sideName) => {
   const side = sides[sideName] || sides.front;
   return { ...side, regions: regionPaths(side) };

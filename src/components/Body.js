@@ -3,6 +3,7 @@ import Styles from "@/styles/Body.module.css";
 import {
   getBodySide,
   getCoverageScale,
+  getZoomViewBox,
   REDNESS_COLORS,
 } from "@/lib/bodyRegions";
 import { assetPath } from "@/lib/assetPath";
@@ -43,7 +44,8 @@ const FLAKES = [
 
 // Ritar kroppen och fyller vald kroppsdel från mitten och utåt
 // i proportion till hur stor andel av området som är drabbat.
-const Body = ({ area, side = "front" }) => {
+// `zoomed` visar bara utsnittet runt kroppsdelen (mobil).
+const Body = ({ area, side = "front", zoomed = false }) => {
   const uid = useId().replace(/:/g, "");
   const body = getBodySide(side);
   const region = body.regions[area.id];
@@ -71,7 +73,11 @@ const Body = ({ area, side = "front" }) => {
   return (
     <svg
       className={Styles.figure}
-      viewBox={`0 0 ${body.width} ${body.height}`}
+      viewBox={
+        zoomed
+          ? getZoomViewBox(side, area.id)
+          : `0 0 ${body.width} ${body.height}`
+      }
       role="img"
       aria-label={`${Math.round(coverage * 100)} %`}
     >

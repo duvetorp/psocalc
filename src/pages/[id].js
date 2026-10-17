@@ -21,6 +21,7 @@ import BackButton from "@/components/BackButton";
 import InfoPopup from "@/components/InfoPopup";
 import ConfirmDialog from "@/components/ConfirmDialog";
 import { format, formatNumber } from "@/lib/scores";
+import useDeviceType from "@/hooks/useDeviceType";
 import sv from "@/locales/sv.json";
 
 // Info-rutan visas automatiskt vid första områdesbesöket under sessionen
@@ -33,6 +34,7 @@ const AreaEditor = ({ savedArea, category }) => {
   const { t, locale } = useTranslation();
   const [draft, setDraft] = useState(savedArea);
   const [side, setSide] = useState("front");
+  const isMobile = useDeviceType();
   const actionsRef = useRef(null);
   const [isLeaveOpen, setIsLeaveOpen] = useState(false);
 
@@ -183,7 +185,7 @@ const AreaEditor = ({ savedArea, category }) => {
             {side === "front" ? t.translation.showBack : t.translation.showFront}
           </IconButton>
           <div className={Styles.figure}>
-            <Body area={draft} side={side} />
+            <Body area={draft} side={side} zoomed={isMobile} />
           </div>
         </aside>
       </div>
