@@ -45,7 +45,7 @@
     "areasAssessed": "{done} of {total} areas assessed",
     "total": "Total",
     "newAssessment": "New assessment",
-    "confirmReset": "Reset all values and start a new assessment?",
+    "confirmReset": "All values for this assessment will be cleared.",
     "seeResultsHint": "Assess at least one area and press Done to see results.",
     "showBack": "Show back",
     "showFront": "Show front",
@@ -63,7 +63,10 @@
     "keepEditing": "Keep editing",
     "discardChanges": "Discard changes",
     "showScoreAs": "Show score as",
-    "scrollToContinue": "Read the information before continuing"
+    "scrollToContinue": "Read the information before continuing",
+    "resetTitle": "Start a new assessment?",
+    "resetConfirm": "Reset",
+    "cancel": "Cancel"
   },
   "generalInfo": {
     "backgroundTitle": "About PsoCalc",

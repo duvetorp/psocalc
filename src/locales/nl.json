@@ -45,7 +45,7 @@
     "areasAssessed": "{done} van {total} gebieden beoordeeld",
     "total": "Totaal",
     "newAssessment": "Nieuwe beoordeling",
-    "confirmReset": "Alle waarden wissen en een nieuwe beoordeling starten?",
+    "confirmReset": "Alle waarden van deze beoordeling worden gewist.",
     "seeResultsHint": "Beoordeel minstens één gebied en druk op Klaar om resultaten te zien.",
     "showBack": "Toon achterkant",
     "showFront": "Toon voorkant",
@@ -63,7 +63,10 @@
     "keepEditing": "Verder bewerken",
     "discardChanges": "Wijzigingen verwerpen",
     "showScoreAs": "Score tonen als",
-    "scrollToContinue": "Lees de informatie voordat u verdergaat"
+    "scrollToContinue": "Lees de informatie voordat u verdergaat",
+    "resetTitle": "Nieuwe beoordeling starten?",
+    "resetConfirm": "Wissen",
+    "cancel": "Annuleren"
   },
   "generalInfo": {
     "backgroundTitle": "Over PsoCalc",

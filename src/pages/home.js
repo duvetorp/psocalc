@@ -6,12 +6,13 @@ import Layout from "@/styles/Layout.module.css";
 import { useArea } from "@/context/AreaContext";
 import BackButton from "@/components/BackButton";
 import Button from "@/components/Button";
+import NewAssessmentButton from "@/components/NewAssessmentButton";
 import Toolbar from "@/components/Toolbar";
 import { CALCULATIONS, getTotalScore, formatScore, format } from "@/lib/scores";
 
 const Home = () => {
   const { t, locale } = useTranslation();
-  const { areas, doneAreas, resetAreas } = useArea();
+  const { areas, doneAreas } = useArea();
   const router = useRouter();
 
   const calculation = CALCULATIONS.includes(router.query.calc)
@@ -24,10 +25,6 @@ const Home = () => {
       undefined,
       { shallow: true }
     );
-  };
-
-  const handleReset = () => {
-    if (window.confirm(t.translation.confirmReset)) resetAreas();
   };
 
   const hasDone = doneAreas.length > 0;
@@ -94,9 +91,7 @@ const Home = () => {
 
         <div className={Layout.actions}>
           {hasDone && (
-            <Button variant="secondary" onClick={handleReset}>
-              {t.translation.newAssessment}
-            </Button>
+            <NewAssessmentButton />
           )}
           <Button disabled={!hasDone} onClick={() => router.push("/results")}>
             {t.translation.seeResults}

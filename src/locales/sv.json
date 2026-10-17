@@ -45,7 +45,7 @@
     "areasAssessed": "{done} av {total} områden bedömda",
     "total": "Totalt",
     "newAssessment": "Ny bedömning",
-    "confirmReset": "Vill du nollställa alla värden och börja en ny bedömning?",
+    "confirmReset": "Alla värden för den här bedömningen försvinner.",
     "seeResultsHint": "Bedöm minst ett område och tryck Klar för att se resultat.",
     "showBack": "Visa baksida",
     "showFront": "Visa framsida",
@@ -63,7 +63,10 @@
     "keepEditing": "Fortsätt redigera",
     "discardChanges": "Kasta ändringar",
     "showScoreAs": "Visa poäng som",
-    "scrollToContinue": "Läs informationen innan du går vidare"
+    "scrollToContinue": "Läs informationen innan du går vidare",
+    "resetTitle": "Börja en ny bedömning?",
+    "resetConfirm": "Nollställ",
+    "cancel": "Avbryt"
   },
   "generalInfo": {
     "backgroundTitle": "Om PsoCalc",

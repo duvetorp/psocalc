@@ -3,6 +3,7 @@ import Image from "next/image";
 import Styles from "@/styles/Results.module.css";
 import Layout from "@/styles/Layout.module.css";
 import Button from "@/components/Button";
+import NewAssessmentButton from "@/components/NewAssessmentButton";
 import BackButton from "@/components/BackButton";
 import Toolbar from "@/components/Toolbar";
 import { useTranslation } from "@/context/TranslationContext";
@@ -12,14 +13,8 @@ import { CALCULATIONS, getTotalScore, formatScore, format } from "@/lib/scores";
 
 const Results = () => {
   const router = useRouter();
-  const { areas, doneAreas, resetAreas } = useArea();
+  const { areas, doneAreas } = useArea();
   const { t, locale } = useTranslation();
-
-  const handleReset = () => {
-    if (!window.confirm(t.translation.confirmReset)) return;
-    resetAreas();
-    router.push("/home");
-  };
 
   return (
     <div className={Layout.page}>
@@ -70,9 +65,7 @@ const Results = () => {
         </p>
 
         <div className={Layout.actions}>
-          <Button variant="secondary" onClick={handleReset}>
-            {t.translation.newAssessment}
-          </Button>
+          <NewAssessmentButton onReset={() => router.push("/home")} />
           <Button onClick={() => router.push("/home")}>
             {t.translation.back}
           </Button>

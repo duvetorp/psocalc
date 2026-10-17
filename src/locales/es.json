@@ -45,7 +45,7 @@
     "areasAssessed": "{done} de {total} áreas evaluadas",
     "total": "Total",
     "newAssessment": "Nueva evaluación",
-    "confirmReset": "¿Restablecer todos los valores y empezar una nueva evaluación?",
+    "confirmReset": "Se borrarán todos los valores de esta evaluación.",
     "seeResultsHint": "Evalúa al menos un área y pulsa Listo para ver los resultados.",
     "showBack": "Ver espalda",
     "showFront": "Ver frente",
@@ -63,7 +63,10 @@
     "keepEditing": "Seguir editando",
     "discardChanges": "Descartar cambios",
     "showScoreAs": "Mostrar puntuación como",
-    "scrollToContinue": "Lee la información antes de continuar"
+    "scrollToContinue": "Lee la información antes de continuar",
+    "resetTitle": "¿Empezar una nueva evaluación?",
+    "resetConfirm": "Restablecer",
+    "cancel": "Cancelar"
   },
   "generalInfo": {
     "backgroundTitle": "Acerca de PsoCalc",
