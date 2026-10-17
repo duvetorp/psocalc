@@ -27,7 +27,7 @@ let hasShownInfo = false;
 // Ändringar görs i ett lokalt utkast och sparas först när man trycker "Klar"
 const AreaEditor = ({ savedArea, category }) => {
   const router = useRouter();
-  const { saveArea } = useArea();
+  const { areas, saveArea } = useArea();
   const { t } = useTranslation();
   const [draft, setDraft] = useState(savedArea);
   const [side, setSide] = useState("front");
@@ -41,10 +41,20 @@ const AreaEditor = ({ savedArea, category }) => {
 
   const updateDraft = (values) => setDraft((prev) => ({ ...prev, ...values }));
 
+  // Nästa obedömda område i listans ordning, efter det aktuella
+  const order = t.categories.map((cat) => cat.id);
+  const currentIndex = order.indexOf(draft.id);
+  const nextCategory = [
+    ...order.slice(currentIndex + 1),
+    ...order.slice(0, currentIndex),
+  ]
+    .map((id) => t.categories.find((cat) => cat.id === id))
+    .find((cat) => !areas.find((area) => area.id === cat.id)?.done);
+
   const handleDone = () => {
     const { value, redness, thickness, scaling } = draft;
     saveArea(draft.id, { value, redness, thickness, scaling });
-    router.push("/home");
+    router.push(nextCategory ? `/${nextCategory.id}` : "/results");
   };
 
   const bsa = (draft.value * 0.5).toFixed(1).replace(/\.0$/, "");
@@ -100,7 +110,11 @@ const AreaEditor = ({ savedArea, category }) => {
             <BodyImages area={draft} onSelect={updateDraft} />
 
             <div className={Layout.actions}>
-              <Button onClick={handleDone}>{t.translation.done}</Button>
+              <Button fullWidth onClick={handleDone}>
+                {nextCategory
+                  ? format(t.translation.doneNext, { area: nextCategory.title })
+                  : t.translation.doneResults}
+              </Button>
             </div>
           </div>
         </div>
