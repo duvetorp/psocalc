@@ -21,7 +21,8 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  /* clip (inte hidden) så att position: sticky fungerar */
+  overflow-x: clip;
   font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   color: var(--text);
   -webkit-font-smoothing: antialiased;

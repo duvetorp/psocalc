@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 8px 16px 24px;
+  gap: 16px;
+  padding: 0 16px;
 }
 
 .logoContainer {
@@ -11,27 +11,49 @@
   justify-content: center;
 }
 
-/* Kortet ryms i fönstret så att "Fortsätt" alltid syns */
+.logoContainer img {
+  width: 130px;
+  height: auto;
+}
+
 .card {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   max-width: 760px;
-  height: calc(100dvh - 200px);
-  min-height: 420px;
   padding: 20px;
   background: var(--surface);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
 }
 
+/* "Fortsätt" ligger fast i botten men är grå tills informationen är läst */
 .footer {
-  padding-top: 16px;
-  margin-top: 16px;
-  border-top: 1px solid var(--border);
+  position: sticky;
+  bottom: 0;
+  width: calc(100% + 32px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 16px max(16px, env(safe-area-inset-bottom));
+  background: linear-gradient(rgba(20, 14, 6, 0), rgba(20, 14, 6, 0.6) 40%);
+}
+
+.footer > * {
+  max-width: 760px;
+}
+
+.footerHint {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
 }
 
 @media (min-width: 1200px) {
+  .logoContainer img {
+    width: 175px;
+  }
+
   .card {
     padding: 32px 40px;
   }

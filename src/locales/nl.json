@@ -62,7 +62,8 @@
     "unsavedText": "U hebt waarden voor dit gebied gewijzigd zonder op Klaar te drukken. Als u teruggaat, gaan de wijzigingen verloren.",
     "keepEditing": "Verder bewerken",
     "discardChanges": "Wijzigingen verwerpen",
-    "showScoreAs": "Score tonen als"
+    "showScoreAs": "Score tonen als",
+    "scrollToContinue": "Lees de informatie voordat u verdergaat"
   },
   "generalInfo": {
     "backgroundTitle": "Over PsoCalc",
@@ -99,5 +100,22 @@
     "notices": "Notices:",
     "noticesFirst": "You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-exception-or-limitation' target='_blank'>exception or limitation</a>.",
     "noticesSecond": "No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-publicity-privacy-or-moral-rights' target='_blank'>publicity, privacy, or moral rights</a> may limit how you use the material."
+  },
+  "howItWorks": {
+    "title": "Zo werkt het",
+    "steps": [
+      {
+        "title": "Beoordeel elk lichaamsdeel",
+        "text": "Hoofd, armen, romp en benen worden apart beoordeeld. Zonder psoriasis is één tik genoeg."
+      },
+      {
+        "title": "Geef oppervlak en ernst aan",
+        "text": "Geef het oppervlak aan in aantal handpalmen en kies roodheid, dikte en schilfering (0–4) met behulp van de afbeeldingen."
+      },
+      {
+        "title": "Bekijk het resultaat",
+        "text": "PASI, zPASI en BSA worden automatisch berekend als u klaar bent."
+      }
+    ]
   }
 }

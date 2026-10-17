@@ -62,7 +62,8 @@
     "unsavedText": "You have changed values for this area without pressing Done. If you go back, the changes will be lost.",
     "keepEditing": "Keep editing",
     "discardChanges": "Discard changes",
-    "showScoreAs": "Show score as"
+    "showScoreAs": "Show score as",
+    "scrollToContinue": "Read the information before continuing"
   },
   "generalInfo": {
     "backgroundTitle": "About PsoCalc",
@@ -99,5 +100,22 @@
     "notices": "Notices:",
     "noticesFirst": "You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-exception-or-limitation' target='_blank'>exception or limitation</a>.",
     "noticesSecond": "No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-publicity-privacy-or-moral-rights' target='_blank'>publicity, privacy, or moral rights</a> may limit how you use the material."
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "steps": [
+      {
+        "title": "Assess each body part",
+        "text": "Head, arms, torso and legs are assessed separately. If there is no psoriasis, one tap is enough."
+      },
+      {
+        "title": "Enter area and severity",
+        "text": "Enter the area in number of palms and choose redness, thickness and scaling (0–4) using the reference images."
+      },
+      {
+        "title": "See the results",
+        "text": "PASI, zPASI and BSA are calculated automatically when you are done."
+      }
+    ]
   }
 }

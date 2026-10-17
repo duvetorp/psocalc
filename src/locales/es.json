@@ -62,7 +62,8 @@
     "unsavedText": "Has cambiado valores de esta área sin pulsar Listo. Si vuelves atrás, se perderán los cambios.",
     "keepEditing": "Seguir editando",
     "discardChanges": "Descartar cambios",
-    "showScoreAs": "Mostrar puntuación como"
+    "showScoreAs": "Mostrar puntuación como",
+    "scrollToContinue": "Lee la información antes de continuar"
   },
   "generalInfo": {
     "backgroundTitle": "Acerca de PsoCalc",
@@ -99,5 +100,22 @@
     "notices": "Avisos:",
     "noticesFirst": "No tienes que cumplir la licencia para los elementos del material que se encuentren en el dominio público o cuando tu uso esté permitido por una <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-exception-or-limitation' target='_blank'>excepción o limitación</a> aplicable.",
     "noticesSecond": "No se ofrecen garantías. La licencia puede no darte todos los permisos necesarios para tu uso previsto. Por ejemplo, otros derechos como los de <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-publicity-privacy-or-moral-rights' target='_blank'>publicidad, privacidad o derechos morales</a> pueden limitar cómo usas el material."
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "steps": [
+      {
+        "title": "Evalúa cada parte del cuerpo",
+        "text": "Cabeza, brazos, torso y piernas se evalúan por separado. Si no hay psoriasis, basta con un toque."
+      },
+      {
+        "title": "Indica superficie y gravedad",
+        "text": "Indica la superficie en número de palmas y elige enrojecimiento, grosor y descamación (0–4) con ayuda de las imágenes."
+      },
+      {
+        "title": "Consulta el resultado",
+        "text": "PASI, zPASI y BSA se calculan automáticamente al terminar."
+      }
+    ]
   }
 }

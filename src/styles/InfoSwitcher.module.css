@@ -2,28 +2,32 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  min-height: 0;
-  flex: 1;
 }
 
 .infoButtons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 4px;
   padding: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
   background: var(--surface-2);
   border-radius: var(--radius);
 }
 
+.infoButtons::-webkit-scrollbar {
+  display: none;
+}
+
 .infoButtons button {
+  flex: 1 0 auto;
   min-height: 40px;
   padding: 6px 8px;
   border: none;
   border-radius: var(--radius-sm);
   background: transparent;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  line-height: 1.2;
+  white-space: nowrap;
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
 }
@@ -39,10 +43,6 @@
 }
 
 .infoContent {
-  flex: 1;
-  min-height: 0;
-  overflow: auto;
-  padding-right: 8px;
   font-size: 15px;
   line-height: 1.6;
 }
@@ -50,4 +50,11 @@
 .infoContent strong {
   font-size: 16px;
   font-weight: 800;
+}
+
+@media (min-width: 600px) {
+  .infoButtons button {
+    padding: 6px 14px;
+    font-size: 14px;
+  }
 }

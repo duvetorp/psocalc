@@ -62,7 +62,8 @@
     "unsavedText": "Du har ändrat värden för det här området utan att trycka Klar. Om du går tillbaka försvinner ändringarna.",
     "keepEditing": "Fortsätt redigera",
     "discardChanges": "Kasta ändringar",
-    "showScoreAs": "Visa poäng som"
+    "showScoreAs": "Visa poäng som",
+    "scrollToContinue": "Läs informationen innan du går vidare"
   },
   "generalInfo": {
     "backgroundTitle": "Om PsoCalc",
@@ -99,5 +100,22 @@
     "notices": "Notices:",
     "noticesFirst": "You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-exception-or-limitation' target='_blank'>exception or limitation</a>.",
     "noticesSecond": "No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-publicity-privacy-or-moral-rights' target='_blank'>publicity, privacy, or moral rights</a> may limit how you use the material."
+  },
+  "howItWorks": {
+    "title": "Så fungerar det",
+    "steps": [
+      {
+        "title": "Bedöm varje kroppsdel",
+        "text": "Huvud, armar, bål och ben bedöms var för sig. Saknas psoriasis räcker ett tryck."
+      },
+      {
+        "title": "Ange yta och svårighetsgrad",
+        "text": "Ange ytan i antal handflator och välj rodnad, tjocklek och fjällning (0–4) med hjälp av bilderna."
+      },
+      {
+        "title": "Se resultatet",
+        "text": "PASI, zPASI och BSA räknas ut automatiskt när du är klar."
+      }
+    ]
   }
 }

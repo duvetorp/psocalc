@@ -28,6 +28,11 @@
   color: #fff;
 }
 
+.primary:disabled {
+  background: #9aa3b2;
+  opacity: 1;
+}
+
 .primary:hover:not(:disabled) {
   background: var(--accent-hover);
 }
