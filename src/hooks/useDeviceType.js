@@ -1,12 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useDeviceType = () => {
-  const [isMobile, setIsMobile] = useState(() => {
-    if (typeof window !== "undefined") {
-      return window.innerWidth <= 1200;
-    }
-    return false; 
-  });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkScreenSize = () => {

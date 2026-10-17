@@ -1,60 +1,74 @@
-import React, { useState } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import Styles from "@/styles/Results.module.css";
-import PasiComponent from "@/components/PasiComponent";
-import ZPasiComponent from "@/components/ZPasiComponent";
-import BsaComponent from "@/components/BsaComponent";
+import Layout from "@/styles/Layout.module.css";
 import Button from "@/components/Button";
+import NewAssessmentButton from "@/components/NewAssessmentButton";
+import BackButton from "@/components/BackButton";
+import Toolbar from "@/components/Toolbar";
 import { useTranslation } from "@/context/TranslationContext";
 import { useArea } from "@/context/AreaContext";
 import { assetPath } from "@/lib/assetPath";
+import { CALCULATIONS, getTotalScore, formatScore, format } from "@/lib/scores";
 
 const Results = () => {
-  const { areas } = useArea();
-  const { t } = useTranslation();
-  const today = new Date();
-
-  const [torsoFill, setTorsoFill] = useState(20); // procent
-
-  const totalHeight = 200; // Höjd på bålen (i viewBox-enhet)
-  const fillHeight = (torsoFill / 100) * totalHeight;
+  const router = useRouter();
+  const { areas, doneAreas } = useArea();
+  const { t, locale } = useTranslation();
 
   return (
-    <div className={Styles.results}>
-      <div className={Styles.resultsContainer}>
-        <div className={Styles.resultsTitle}>
-          <Image
-            src={assetPath("/images/stetoskop.png")}
-            alt="stetoskop"
-            width={38}
-            height={38}
-          />
-          <h1>{t.translation.results}</h1>
+    <div className={Layout.page}>
+      <div className={Layout.card}>
+        <Toolbar
+          left={<BackButton />}
+          title={
+            <span className={Styles.title}>
+              <Image
+                src={assetPath("/images/stetoskop.png")}
+                alt=""
+                width={30}
+                height={30}
+              />
+              {t.translation.results}
+            </span>
+          }
+        />
+
+        <p className={Styles.date}>
+          {new Date().toLocaleDateString(locale, {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </p>
+
+        <div className={Styles.stats}>
+          {CALCULATIONS.map((calculation) => (
+            <div key={calculation} className={Styles.stat}>
+              <span className={Styles.statValue}>
+                {formatScore(
+                  calculation,
+                  getTotalScore(calculation, doneAreas),
+                  locale
+                )}
+              </span>
+              <span className={Styles.statLabel}>{calculation}</span>
+            </div>
+          ))}
         </div>
-        <div className={Styles.resultsDate}>
-          <p>
-            {today.getDate()}/{today.getMonth() + 1}/{today.getFullYear()}
-          </p>
-        </div>
-        <div className={Styles.resultsContent}>
-          <h2>{t.translation.yourResults}</h2>
-          <div className={Styles.resultsAreaItem}>
-            <PasiComponent areas={areas} total={true} /> <p>PASI</p>
-          </div>
-          <div className={Styles.resultsAreaItem}>
-            <ZPasiComponent areas={areas} total={true} /> <p>zPASI</p>
-          </div>
-          <div className={Styles.resultsAreaItem}>
-            <BsaComponent areas={areas} total={true} /> <p>BSA</p>
-          </div>
-        </div>
-        <div className={Styles.resultsButton}>
-          <Button
-            textButton={t.translation.back}
-            buttonUrl="/home"
-            shouldLock={false}
-            width={250}
-          />
+
+        <p className={Layout.hint}>
+          {format(t.translation.basedOnAreas, {
+            done: doneAreas.length,
+            total: areas.length,
+          })}
+        </p>
+
+        <div className={Layout.actions}>
+          <NewAssessmentButton onReset={() => router.push("/home")} />
+          <Button onClick={() => router.push("/home")}>
+            {t.translation.back}
+          </Button>
         </div>
       </div>
     </div>

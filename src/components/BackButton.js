@@ -1,29 +1,19 @@
-import Image from "next/image";
-import Styles from "@/styles/BackButton.module.css";
 import { useRouter } from "next/router";
-import { assetPath } from "@/lib/assetPath";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import IconButton from "@/components/IconButton";
+import { useTranslation } from "@/context/TranslationContext";
 
-const BackButton = () => {
+// `onBack` ersätter standardbeteendet, t.ex. för att först fråga om osparade ändringar
+const BackButton = ({ onBack }) => {
   const router = useRouter();
+  const { t } = useTranslation();
 
   const back = () => {
-    if (router.pathname === "/home") {
-      router.push("/");
-    } else if (router.pathname === "/[id]") {
-      router.push("/home");
-    }
+    router.push(router.pathname === "/home" ? "/" : "/home");
   };
 
   return (
-    <div className={Styles.backButtonWrapper}>
-      <Image
-        src={assetPath("/images/back.png")}
-        alt="Back"
-        width={35}
-        height={36}
-        onClick={() => back()}
-      />
-    </div>
+    <IconButton icon={faArrowLeft} label={t.translation.back} onClick={onBack || back} />
   );
 };
 

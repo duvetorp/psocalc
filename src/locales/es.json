@@ -25,7 +25,7 @@
     "chooseArea": "Elige área",
     "hands": "Manos",
     "hand": "Mano",
-    "handText": "Indica el área de piel afectada usando el método de la palma, tanto por delante como por detrás.",
+    "handText": "Número de palmas, por delante y por detrás.",
     "redness": "Enrojecimiento",
     "scaling": "Descamación",
     "thickness": "Grosor",
@@ -40,7 +40,34 @@
     "generalInfoButton": "Información general",
     "mathematicalFoundationButton": "Fundamento matemático",
     "disclaimerButton": "Descargo de responsabilidad",
-    "chooseHandsHere": "Elige número de manos"
+    "chooseHandsHere": "Elige número de manos",
+    "notAssessed": "Sin evaluar",
+    "areasAssessed": "{done} de {total} áreas evaluadas",
+    "total": "Total",
+    "newAssessment": "Nueva evaluación",
+    "confirmReset": "Se borrarán todos los valores de esta evaluación.",
+    "seeResultsHint": "Evalúa al menos un área y pulsa Listo para ver los resultados.",
+    "showBack": "Ver espalda",
+    "showFront": "Ver frente",
+    "palmsSummary": "{percent} % de {area}",
+    "info": "Información",
+    "close": "Cerrar",
+    "basedOnAreas": "Basado en {done} de {total} áreas evaluadas",
+    "palmHint": "1 palma (la del paciente, sin dedos).",
+    "buttocksHint": "Los glúteos forman parte de las piernas.",
+    "doneNext": "Listo – siguiente: {area}",
+    "doneResults": "Listo – ver resultados",
+    "noPsoriasis": "Sin psoriasis aquí",
+    "unsavedTitle": "Cambios sin guardar",
+    "unsavedText": "Has cambiado valores de esta área sin pulsar Listo. Si vuelves atrás, se perderán los cambios.",
+    "keepEditing": "Seguir editando",
+    "discardChanges": "Descartar cambios",
+    "showScoreAs": "Mostrar puntuación como",
+    "scrollToContinue": "Lee la información antes de continuar",
+    "resetTitle": "¿Empezar una nueva evaluación?",
+    "resetConfirm": "Restablecer",
+    "cancel": "Cancelar",
+    "area": "Superficie"
   },
   "generalInfo": {
     "backgroundTitle": "Acerca de PsoCalc",
@@ -77,5 +104,22 @@
     "notices": "Avisos:",
     "noticesFirst": "No tienes que cumplir la licencia para los elementos del material que se encuentren en el dominio público o cuando tu uso esté permitido por una <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-exception-or-limitation' target='_blank'>excepción o limitación</a> aplicable.",
     "noticesSecond": "No se ofrecen garantías. La licencia puede no darte todos los permisos necesarios para tu uso previsto. Por ejemplo, otros derechos como los de <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-publicity-privacy-or-moral-rights' target='_blank'>publicidad, privacidad o derechos morales</a> pueden limitar cómo usas el material."
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "steps": [
+      {
+        "title": "Evalúa cada parte del cuerpo",
+        "text": "Cabeza, brazos, torso y piernas se evalúan por separado. Si no hay psoriasis, basta con un toque."
+      },
+      {
+        "title": "Indica superficie y gravedad",
+        "text": "Indica la superficie en número de palmas y elige enrojecimiento, grosor y descamación (0–4) con ayuda de las imágenes."
+      },
+      {
+        "title": "Consulta el resultado",
+        "text": "PASI, zPASI y BSA se calculan automáticamente al terminar."
+      }
+    ]
   }
 }

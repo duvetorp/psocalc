@@ -1,0 +1,31 @@
+.iconButton {
+  flex-shrink: 0;
+  min-width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.withText {
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Hover bara på enheter med mus – annars fastnar läget efter tryck på touch */
+@media (hover: hover) {
+  .iconButton:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}

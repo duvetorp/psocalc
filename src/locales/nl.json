@@ -25,7 +25,7 @@
     "chooseArea": "Kies gebied",
     "hands": "Handen",
     "hand": "Hand",
-    "handText": "Geef het getroffen huidgebied aan met de handpalm-methode, zowel voor- als achterkant.",
+    "handText": "Aantal handpalmen, voor- en achterkant.",
     "redness": "Roodheid",
     "scaling": "Schilfering",
     "thickness": "Dikte",
@@ -40,7 +40,34 @@
     "generalInfoButton": "Algemene info",
     "mathematicalFoundationButton": "Wiskundige basis",
     "disclaimerButton": "Disclaimer",
-    "chooseHandsHere": "Kies aantal handen"
+    "chooseHandsHere": "Kies aantal handen",
+    "notAssessed": "Niet beoordeeld",
+    "areasAssessed": "{done} van {total} gebieden beoordeeld",
+    "total": "Totaal",
+    "newAssessment": "Nieuwe beoordeling",
+    "confirmReset": "Alle waarden van deze beoordeling worden gewist.",
+    "seeResultsHint": "Beoordeel minstens één gebied en druk op Klaar om resultaten te zien.",
+    "showBack": "Toon achterkant",
+    "showFront": "Toon voorkant",
+    "palmsSummary": "{percent} % van {area}",
+    "info": "Informatie",
+    "close": "Sluiten",
+    "basedOnAreas": "Gebaseerd op {done} van {total} beoordeelde gebieden",
+    "palmHint": "1 handpalm (van de patiënt, zonder vingers).",
+    "buttocksHint": "De billen horen bij de benen.",
+    "doneNext": "Klaar – volgende: {area}",
+    "doneResults": "Klaar – bekijk resultaten",
+    "noPsoriasis": "Geen psoriasis hier",
+    "unsavedTitle": "Niet-opgeslagen wijzigingen",
+    "unsavedText": "U hebt waarden voor dit gebied gewijzigd zonder op Klaar te drukken. Als u teruggaat, gaan de wijzigingen verloren.",
+    "keepEditing": "Verder bewerken",
+    "discardChanges": "Wijzigingen verwerpen",
+    "showScoreAs": "Score tonen als",
+    "scrollToContinue": "Lees de informatie voordat u verdergaat",
+    "resetTitle": "Nieuwe beoordeling starten?",
+    "resetConfirm": "Wissen",
+    "cancel": "Annuleren",
+    "area": "Oppervlak"
   },
   "generalInfo": {
     "backgroundTitle": "Over PsoCalc",
@@ -77,5 +104,22 @@
     "notices": "Notices:",
     "noticesFirst": "You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-exception-or-limitation' target='_blank'>exception or limitation</a>.",
     "noticesSecond": "No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-publicity-privacy-or-moral-rights' target='_blank'>publicity, privacy, or moral rights</a> may limit how you use the material."
+  },
+  "howItWorks": {
+    "title": "Zo werkt het",
+    "steps": [
+      {
+        "title": "Beoordeel elk lichaamsdeel",
+        "text": "Hoofd, armen, romp en benen worden apart beoordeeld. Zonder psoriasis is één tik genoeg."
+      },
+      {
+        "title": "Geef oppervlak en ernst aan",
+        "text": "Geef het oppervlak aan in aantal handpalmen en kies roodheid, dikte en schilfering (0–4) met behulp van de afbeeldingen."
+      },
+      {
+        "title": "Bekijk het resultaat",
+        "text": "PASI, zPASI en BSA worden automatisch berekend als u klaar bent."
+      }
+    ]
   }
 }

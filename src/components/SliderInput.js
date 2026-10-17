@@ -1,125 +1,70 @@
-import { useState, useEffect } from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
-import { useArea } from "@/context/AreaContext";
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import Styles from "@/styles/SliderInput.module.css";
-import { useTranslation } from "@/context/TranslationContext";
+import IconButton from "@/components/IconButton";
 import Image from "next/image";
 import { assetPath } from "@/lib/assetPath";
+import { formatNumber } from "@/lib/scores";
+import { useTranslation } from "@/context/TranslationContext";
 
-const SliderInput = ({ id }) => {
-  const { areas, setAreas } = useArea();
-  const selectedArea = areas.find((item) => item.id === id);
-  const { t } = useTranslation();
+const STEP = 0.5;
 
-  const [value, setValue] = useState(
-    selectedArea?.done ? selectedArea.value : 0
-  );
-
-  useEffect(() => {
-    setAreas((prevAreas) =>
-      prevAreas.map((area) => (area.id === id ? { ...area, value } : area))
-    );
-  }, [value]);
-
-  const handleDecrease = () => {
-    setValue((prev) =>
-      Math.max(parseFloat((parseFloat(prev) - 0.5).toFixed(1)), 0)
-    );
-  };
-
-  const handleIncrease = () => {
-    setValue((prev) =>
-      Math.min(
-        parseFloat((parseFloat(prev) + 0.5).toFixed(1)),
-        selectedArea.palms
-      )
-    );
-  };
+// Antal handflator (PSA) för ett område, i steg om 0,5.
+// `children` visas under reglaget, t.ex. hur stor andel som valts.
+const SliderInput = ({ value, max, label, onChange, children }) => {
+  const { locale } = useTranslation();
+  const clamp = (next) =>
+    Math.min(Math.max(Math.round(next / STEP) * STEP, 0), max);
 
   return (
-    <div className={Styles.sliderInput}>
-      <div className={Styles.sliderInputContainer}>
-        <button
-          onClick={handleDecrease}
-          className={Styles.sliderInputDecreaseButton}
-        >
-          −
-        </button>
+    <div className={Styles.sliderBox}>
+      <div className={Styles.sliderInput}>
+        <IconButton
+          icon={faMinus}
+          label="−"
+          onClick={() => onChange(clamp(value - STEP))}
+        />
 
-        <div className={Styles.sliderInputDecreaseWrapper}>
+        <div className={Styles.track}>
           <Slider
             min={0}
-            max={selectedArea.palms}
-            step={0.5}
-            value={parseFloat(value)}
-            onChange={(val) => setValue(val.toFixed(1))}
+            max={max}
+            step={STEP}
+            value={value}
+            onChange={(val) => onChange(clamp(val))}
+            ariaLabelForHandle={label}
             styles={{
-              track: { backgroundColor: "transparent", height: 10 },
-              rail: { backgroundColor: "transparent", height: 10 },
+              rail: { backgroundColor: "#d5dce6", height: 8 },
+              track: { backgroundColor: "var(--accent)", height: 8 },
             }}
-            handleRender={(renderProps) => {
-              return (
-                <div
-                  {...renderProps.props}
-                  aria-label={t.translation.chooseHandsHere}
-                  style={{
-                    ...renderProps.props.style,
-                    width: "50px",
-                    height: "50px",
-                    position: "absolute", // viktigt för att kunna justera
-                    top: "10%", // centrerar vertikalt
-                    left: renderProps.props.style?.left, // behåller horisontell position
-                    transform: "translate(-50%, -50%)", // centrerar både x och y
-                    cursor: "grab",
-                    background: "transparent",
-                    border: "none",
-                    boxShadow: "none",
-                    padding: 0,
-                    margin: 0,
-                  }}
-                >
-                  <Image
-                    src={assetPath("/images/hand.svg")}
-                    alt="hand"
-                    width={62}
-                    height={65}
-                    draggable={false}
-                    style={{
-                      pointerEvents: "none",
-                      position: "absolute",
-                      top: -3,
-                      left: 0,
-                    }}
-                  />
-                  <span
-                    style={{
-                      position: "absolute",
-                      top: "72%",
-                      left: "64%",
-                      transform: "translate(-50%, -50%)",
-                      color: "#000",
-                      fontWeight: "bold",
-                      fontSize: "14px",
-                      pointerEvents: "none",
-                      fontSize: "13px",
-                    }}
-                  >
-                    {parseFloat(value)}
-                  </span>
-                </div>
-              );
-            }}
+            handleRender={(node) => (
+              <div
+                {...node.props}
+                className={`${node.props.className} ${Styles.handle}`}
+              >
+                <Image
+                  src={assetPath("/images/hand.svg")}
+                  alt=""
+                  width={48}
+                  height={50}
+                  draggable={false}
+                />
+                <span className={Styles.handleValue}>
+                  {formatNumber(value, locale)}
+                </span>
+              </div>
+            )}
           />
         </div>
 
-        <button
-          onClick={handleIncrease}
-          className={Styles.sliderInputIncreaseButton}
-        >
-          +
-        </button>
+        <IconButton
+          icon={faPlus}
+          label="+"
+          onClick={() => onChange(clamp(value + STEP))}
+        />
       </div>
+      {children && <p className={Styles.summary}>{children}</p>}
     </div>
   );
 };
