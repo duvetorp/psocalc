@@ -92,7 +92,16 @@ const Body = ({ area, side = "front", zoomed = false }) => {
           <feGaussianBlur stdDeviation="2.5" />
         </filter>
         {/* Ellipserna med mjuk kant */}
-        <mask id={ids.mask} maskUnits="userSpaceOnUse">
+        {/* Fast yta i kroppens koordinater – procent skulle utgå från
+            den (inzoomade) viewBoxen och klippa bort delar av fyllningen */}
+        <mask
+          id={ids.mask}
+          maskUnits="userSpaceOnUse"
+          x="-20"
+          y="-20"
+          width={body.width + 40}
+          height={body.height + 40}
+        >
           <g filter={`url(#${ids.feather})`}>
             {coverage > 0 &&
               shapes.map((d, index) => <path key={index} d={d} fill="#fff" />)}
