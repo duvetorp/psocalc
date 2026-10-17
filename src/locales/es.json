@@ -110,7 +110,7 @@
     "steps": [
       {
         "title": "Evalúa cada parte del cuerpo",
-        "text": "Cabeza, brazos, torso y piernas se evalúan por separado. Si no hay psoriasis, basta con un toque."
+        "text": "Cabeza, brazos, torso y piernas se evalúan por separado."
       },
       {
         "title": "Indica superficie y gravedad",
@@ -121,5 +121,37 @@
         "text": "PASI, zPASI y BSA se calculan automáticamente al terminar."
       }
     ]
+  },
+  "guide": {
+    "readMore": "Leer más",
+    "title": "Paso a paso",
+    "intro": "Así se hace una evaluación. Solo lleva un par de minutos.",
+    "steps": [
+      {
+        "title": "Elige una parte del cuerpo",
+        "text": "Toca una parte del cuerpo en la lista. Una marca verde indica cuáles están listas."
+      },
+      {
+        "title": "Mira la parte del cuerpo",
+        "text": "La figura muestra la parte elegida. El relleno crece con la superficie y se vuelve más rojo con más enrojecimiento. Toca Ver espalda para girar la figura."
+      },
+      {
+        "title": "Indica la superficie",
+        "text": "Arrastra la mano o toca − y +. Cuenta las palmas del paciente (sin dedos), delante y detrás juntas."
+      },
+      {
+        "title": "Elige la gravedad",
+        "text": "Compara con las imágenes y elige 0–4 para **enrojecimiento**, **grosor** y **descamación**. Si las placas varían, elige un promedio."
+      },
+      {
+        "title": "Toca Listo",
+        "text": "Los valores se guardan solo al tocar Listo. Pasas directamente a la siguiente parte del cuerpo."
+      },
+      {
+        "title": "Consulta el resultado",
+        "text": "PASI, zPASI y BSA se calculan automáticamente. Nueva evaluación lo borra todo."
+      }
+    ],
+    "tip": "Toca el botón i en la página de evaluación para volver a leer las instrucciones."
   }
 }

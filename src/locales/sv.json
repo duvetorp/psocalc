@@ -110,7 +110,7 @@
     "steps": [
       {
         "title": "Bedöm varje kroppsdel",
-        "text": "Huvud, armar, bål och ben bedöms var för sig. Saknas psoriasis räcker ett tryck."
+        "text": "Huvud, armar, bål och ben bedöms var för sig."
       },
       {
         "title": "Ange yta och svårighetsgrad",
@@ -121,5 +121,37 @@
         "text": "PASI, zPASI och BSA räknas ut automatiskt när du är klar."
       }
     ]
+  },
+  "guide": {
+    "readMore": "Läs mer",
+    "title": "Steg för steg",
+    "intro": "Så här gör du en bedömning. Det tar bara ett par minuter.",
+    "steps": [
+      {
+        "title": "Välj kroppsdel",
+        "text": "Tryck på en kroppsdel i listan. En grön bock visar vilka som är klara."
+      },
+      {
+        "title": "Se kroppsdelen",
+        "text": "Figuren visar vald kroppsdel. Fyllningen växer med ytan och blir rödare med högre rodnad. Tryck Visa baksida för att vända figuren."
+      },
+      {
+        "title": "Ange ytan",
+        "text": "Dra handen eller tryck − och +. Räkna patientens handflator (utan fingrar), fram- och baksida tillsammans."
+      },
+      {
+        "title": "Välj svårighetsgrad",
+        "text": "Jämför med bilderna och välj 0–4 för **rodnad**, **tjocklek** och **fjällning**. Ser fläckarna olika ut, välj ett genomsnitt."
+      },
+      {
+        "title": "Tryck Klar",
+        "text": "Värdena sparas först när du trycker Klar. Du kommer direkt vidare till nästa kroppsdel."
+      },
+      {
+        "title": "Se resultatet",
+        "text": "PASI, zPASI och BSA räknas ut automatiskt. Ny bedömning nollställer allt."
+      }
+    ],
+    "tip": "Tryck på i-knappen på bedömningssidan om du vill läsa instruktionerna igen."
   }
 }

@@ -110,7 +110,7 @@
     "steps": [
       {
         "title": "Beoordeel elk lichaamsdeel",
-        "text": "Hoofd, armen, romp en benen worden apart beoordeeld. Zonder psoriasis is één tik genoeg."
+        "text": "Hoofd, armen, romp en benen worden apart beoordeeld."
       },
       {
         "title": "Geef oppervlak en ernst aan",
@@ -121,5 +121,37 @@
         "text": "PASI, zPASI en BSA worden automatisch berekend als u klaar bent."
       }
     ]
+  },
+  "guide": {
+    "readMore": "Lees meer",
+    "title": "Stap voor stap",
+    "intro": "Zo maakt u een beoordeling. Het duurt maar een paar minuten.",
+    "steps": [
+      {
+        "title": "Kies een lichaamsdeel",
+        "text": "Tik op een lichaamsdeel in de lijst. Een groen vinkje toont welke klaar zijn."
+      },
+      {
+        "title": "Bekijk het lichaamsdeel",
+        "text": "De figuur toont het gekozen lichaamsdeel. De vulling groeit met het oppervlak en wordt roder bij meer roodheid. Tik op Toon achterkant om de figuur te draaien."
+      },
+      {
+        "title": "Geef het oppervlak aan",
+        "text": "Sleep de hand of tik op − en +. Tel de handpalmen van de patiënt (zonder vingers), voor- en achterkant samen."
+      },
+      {
+        "title": "Kies de ernst",
+        "text": "Vergelijk met de afbeeldingen en kies 0–4 voor **roodheid**, **dikte** en **schilfering**. Verschillen de plekken, kies dan een gemiddelde."
+      },
+      {
+        "title": "Tik op Klaar",
+        "text": "De waarden worden pas opgeslagen als u op Klaar tikt. U gaat direct door naar het volgende lichaamsdeel."
+      },
+      {
+        "title": "Bekijk het resultaat",
+        "text": "PASI, zPASI en BSA worden automatisch berekend. Nieuwe beoordeling wist alles."
+      }
+    ],
+    "tip": "Tik op de i-knop op de beoordelingspagina om de instructies opnieuw te lezen."
   }
 }

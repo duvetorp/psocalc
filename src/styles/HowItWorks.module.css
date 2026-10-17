@@ -45,3 +45,7 @@
   color: var(--muted);
   margin-top: 2px;
 }
+
+.readMore {
+  margin-top: 20px;
+}
