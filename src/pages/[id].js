@@ -34,6 +34,19 @@ const AreaEditor = ({ savedArea, category }) => {
   const [draft, setDraft] = useState(savedArea);
   const [side, setSide] = useState("front");
   const isMobile = useDeviceType();
+
+  // Fram/bak-knappen: överst i kroppspanelen på desktop, vid YTA på mobil
+  const sideLabel =
+    side === "front" ? t.translation.showBack : t.translation.showFront;
+  const sideToggle = (
+    <IconButton
+      icon={faRotate}
+      label={sideLabel}
+      onClick={() => setSide(side === "front" ? "back" : "front")}
+    >
+      {sideLabel}
+    </IconButton>
+  );
   const actionsRef = useRef(null);
   const [isLeaveOpen, setIsLeaveOpen] = useState(false);
 
@@ -137,7 +150,10 @@ const AreaEditor = ({ savedArea, category }) => {
             */}
 
             <section className={Styles.section}>
-              <h2 className={Styles.sectionTitle}>{t.translation.area}</h2>
+              <div className={Styles.sectionHeader}>
+                <h2 className={Styles.sectionTitle}>{t.translation.area}</h2>
+                {isMobile && sideToggle}
+              </div>
               <p className={Styles.handText}>
                 {t.translation.handText}
                 <br />
@@ -155,10 +171,12 @@ const AreaEditor = ({ savedArea, category }) => {
                 label={t.translation.chooseHandsHere}
                 onChange={(value) => updateDraft({ value })}
               >
+                {/* Tillfälligt borttagen – andel av området, t.ex. "50 % av ben"
                 {format(t.translation.palmsSummary, {
                   percent: areaPercent,
                   area: category.title.toLowerCase(),
                 })}
+                */}
               </SliderInput>
             </section>
 
@@ -175,13 +193,7 @@ const AreaEditor = ({ savedArea, category }) => {
         </div>
 
         <aside className={Styles.bodyPanel}>
-          <IconButton
-            icon={faRotate}
-            label={side === "front" ? t.translation.showBack : t.translation.showFront}
-            onClick={() => setSide(side === "front" ? "back" : "front")}
-          >
-            {side === "front" ? t.translation.showBack : t.translation.showFront}
-          </IconButton>
+          {!isMobile && sideToggle}
           <div className={Styles.figure}>
             <Body area={draft} side={side} zoomed={isMobile} />
           </div>
