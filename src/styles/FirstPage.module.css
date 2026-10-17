@@ -35,7 +35,11 @@
   align-items: center;
   gap: 8px;
   padding: 24px 16px max(16px, env(safe-area-inset-bottom));
-  background: linear-gradient(rgba(20, 14, 6, 0), rgba(20, 14, 6, 0.6) 40%);
+  background: linear-gradient(rgba(20, 14, 6, 0), rgba(20, 14, 6, 0.92) 30%);
+}
+
+.footerAtEnd {
+  background: transparent;
 }
 
 .footer > * {

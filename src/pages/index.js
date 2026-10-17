@@ -13,7 +13,9 @@ const FirstPage = () => {
   const router = useRouter();
   const infoEndRef = useRef(null);
   const footerRef = useRef(null);
+  const pageEndRef = useRef(null);
   const [hasReadInfo, setHasReadInfo] = useState(false);
+  const [isAtEnd, setIsAtEnd] = useState(false);
 
   // "Fortsätt" aktiveras när slutet av info-kortet har synts ovanför knappen
   useEffect(() => {
@@ -27,7 +29,18 @@ const FirstPage = () => {
       { rootMargin: `0px 0px -${footerHeight}px 0px` }
     );
     observer.observe(infoEndRef.current);
-    return () => observer.disconnect();
+
+    // Längst ner behövs ingen mörk bakgrund bakom knappen
+    const endObserver = new IntersectionObserver(
+      ([entry]) => setIsAtEnd(entry.isIntersecting),
+      { rootMargin: "0px 0px 32px 0px" }
+    );
+    endObserver.observe(pageEndRef.current);
+
+    return () => {
+      observer.disconnect();
+      endObserver.disconnect();
+    };
   }, []);
 
   return (
@@ -48,7 +61,10 @@ const FirstPage = () => {
       <div className={Styles.card}>
         <HowItWorks />
       </div>
-      <div className={Styles.footer} ref={footerRef}>
+      <div
+        className={`${Styles.footer} ${isAtEnd ? Styles.footerAtEnd : ""}`}
+        ref={footerRef}
+      >
         <Button
           fullWidth
           disabled={!hasReadInfo}
@@ -60,6 +76,7 @@ const FirstPage = () => {
           <p className={Styles.footerHint}>{t.translation.scrollToContinue}</p>
         )}
       </div>
+      <div ref={pageEndRef} aria-hidden="true" />
     </div>
   );
 };

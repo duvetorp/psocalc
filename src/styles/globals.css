@@ -30,13 +30,20 @@ body {
 
 body {
   background-color: #3b2a18;
+  min-height: 100dvh;
+}
+
+/* Fast bakgrundslager – background-attachment: fixed fungerar inte i iOS Safari */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background-image: linear-gradient(rgba(20, 14, 6, 0.25), rgba(20, 14, 6, 0.45)),
     var(--bg-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100dvh;
 }
 
 * {
