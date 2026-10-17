@@ -52,7 +52,9 @@
     "palmsSummary": "≈ {bsa} % of body surface · {percent} % of the area",
     "info": "Information",
     "close": "Close",
-    "basedOnAreas": "Based on {done} of {total} assessed areas"
+    "basedOnAreas": "Based on {done} of {total} assessed areas",
+    "palmHint": "1 palm = the patient's palm without fingers ≈ 0.5 % of the body surface. {max} palms cover the whole area.",
+    "buttocksHint": "The buttocks count as part of the legs."
   },
   "generalInfo": {
     "backgroundTitle": "About PsoCalc",

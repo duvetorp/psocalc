@@ -52,7 +52,9 @@
     "palmsSummary": "≈ {bsa} % av kroppsytan · {percent} % av området",
     "info": "Information",
     "close": "Stäng",
-    "basedOnAreas": "Baserat på {done} av {total} bedömda områden"
+    "basedOnAreas": "Baserat på {done} av {total} bedömda områden",
+    "palmHint": "1 handflata = patientens handflata utan fingrar ≈ 0,5 % av kroppsytan. {max} handflator täcker hela området.",
+    "buttocksHint": "Rumpan räknas till ben."
   },
   "generalInfo": {
     "backgroundTitle": "Om PsoCalc",

@@ -52,7 +52,9 @@
     "palmsSummary": "≈ {bsa} % van het lichaamsoppervlak · {percent} % van het gebied",
     "info": "Informatie",
     "close": "Sluiten",
-    "basedOnAreas": "Gebaseerd op {done} van {total} beoordeelde gebieden"
+    "basedOnAreas": "Gebaseerd op {done} van {total} beoordeelde gebieden",
+    "palmHint": "1 handpalm = de handpalm van de patiënt zonder vingers ≈ 0,5 % van het lichaamsoppervlak. {max} handpalmen bedekken het hele gebied.",
+    "buttocksHint": "De billen horen bij de benen."
   },
   "generalInfo": {
     "backgroundTitle": "Over PsoCalc",

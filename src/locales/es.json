@@ -52,7 +52,9 @@
     "palmsSummary": "≈ {bsa} % de la superficie corporal · {percent} % del área",
     "info": "Información",
     "close": "Cerrar",
-    "basedOnAreas": "Basado en {done} de {total} áreas evaluadas"
+    "basedOnAreas": "Basado en {done} de {total} áreas evaluadas",
+    "palmHint": "1 palma = la palma del paciente sin dedos ≈ 0,5 % de la superficie corporal. {max} palmas cubren toda el área.",
+    "buttocksHint": "Los glúteos forman parte de las piernas."
   },
   "generalInfo": {
     "backgroundTitle": "Acerca de PsoCalc",

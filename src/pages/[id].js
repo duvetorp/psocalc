@@ -1,6 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { faCircleInfo, faRotate } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleInfo,
+  faHand,
+  faRotate,
+} from "@fortawesome/free-solid-svg-icons";
 import Body from "@/components/Body";
 import { useTranslation } from "@/context/TranslationContext";
 import Styles from "@/styles/DynamicPage.module.css";
@@ -16,6 +21,9 @@ import InfoPopup from "@/components/InfoPopup";
 import { format } from "@/lib/scores";
 import sv from "@/locales/sv.json";
 
+// Info-rutan visas automatiskt vid första områdesbesöket under sessionen
+let hasShownInfo = false;
+
 // Ändringar görs i ett lokalt utkast och sparas först när man trycker "Klar"
 const AreaEditor = ({ savedArea, category }) => {
   const router = useRouter();
@@ -24,6 +32,12 @@ const AreaEditor = ({ savedArea, category }) => {
   const [draft, setDraft] = useState(savedArea);
   const [side, setSide] = useState("front");
   const [isInfoOpen, setIsInfoOpen] = useState(false);
+
+  useEffect(() => {
+    if (hasShownInfo) return;
+    hasShownInfo = true;
+    setIsInfoOpen(true);
+  }, []);
 
   const updateDraft = (values) => setDraft((prev) => ({ ...prev, ...values }));
 
@@ -69,6 +83,18 @@ const AreaEditor = ({ savedArea, category }) => {
                   percent: areaPercent,
                 })}
               </p>
+              <ul className={Styles.hints}>
+                <li>
+                  <FontAwesomeIcon icon={faHand} />
+                  {format(t.translation.palmHint, { max: draft.palms })}
+                </li>
+                {draft.id === "leg" && (
+                  <li>
+                    <FontAwesomeIcon icon={faCircleInfo} />
+                    {t.translation.buttocksHint}
+                  </li>
+                )}
+              </ul>
             </section>
 
             <BodyImages area={draft} onSelect={updateDraft} />

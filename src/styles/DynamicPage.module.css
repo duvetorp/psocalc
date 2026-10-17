@@ -57,6 +57,32 @@
   margin-top: 10px;
 }
 
+.hints {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: var(--surface-2);
+  border-radius: var(--radius);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.hints li {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.hints svg {
+  flex-shrink: 0;
+  width: 14px;
+  color: var(--accent);
+}
+
 @media (min-width: 1200px) {
   .shell {
     display: grid;

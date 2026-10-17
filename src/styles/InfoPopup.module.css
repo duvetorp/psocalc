@@ -16,7 +16,7 @@
   max-width: 440px;
   max-height: 90dvh;
   overflow: auto;
-  padding: 32px 28px 28px;
+  padding: 60px 24px 24px;
   background: var(--surface);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
