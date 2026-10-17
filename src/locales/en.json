@@ -25,7 +25,7 @@
     "chooseArea": "Choose area",
     "hands": "Hands",
     "hand": "Hand",
-    "handText": "Specify the affected skin area using the palm method, both front and back.",
+    "handText": "Number of palms, front and back.",
     "redness": "Redness",
     "scaling": "Scaling",
     "thickness": "Thickness",
@@ -49,11 +49,11 @@
     "seeResultsHint": "Assess at least one area and press Done to see results.",
     "showBack": "Show back",
     "showFront": "Show front",
-    "palmsSummary": "≈ {bsa} % of body surface · {percent} % of the area",
+    "palmsSummary": "{bsa} % of the body · {percent} % of {area}",
     "info": "Information",
     "close": "Close",
     "basedOnAreas": "Based on {done} of {total} assessed areas",
-    "palmHint": "1 palm = the patient's palm without fingers ≈ 0.5 % of the body surface. {max} palms cover the whole area.",
+    "palmHint": "1 palm (the patient's, without fingers).",
     "buttocksHint": "The buttocks count as part of the legs.",
     "doneNext": "Done – next: {area}",
     "doneResults": "Done – see results",
@@ -66,7 +66,8 @@
     "scrollToContinue": "Read the information before continuing",
     "resetTitle": "Start a new assessment?",
     "resetConfirm": "Reset",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "area": "Area"
   },
   "generalInfo": {
     "backgroundTitle": "About PsoCalc",

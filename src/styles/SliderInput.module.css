@@ -1,10 +1,21 @@
+.sliderBox {
+  padding: 18px 12px 12px;
+  background: var(--surface-2);
+  border-radius: var(--radius);
+}
+
 .sliderInput {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 18px 12px 8px;
-  background: var(--surface-2);
-  border-radius: var(--radius);
+}
+
+.summary {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
 }
 
 .track {
@@ -54,11 +65,3 @@
   pointer-events: none;
 }
 
-.scale {
-  display: flex;
-  justify-content: space-between;
-  margin: 2px -18px 0;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--muted);
-}

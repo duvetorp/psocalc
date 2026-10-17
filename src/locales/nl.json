@@ -25,7 +25,7 @@
     "chooseArea": "Kies gebied",
     "hands": "Handen",
     "hand": "Hand",
-    "handText": "Geef het getroffen huidgebied aan met de handpalm-methode, zowel voor- als achterkant.",
+    "handText": "Aantal handpalmen, voor- en achterkant.",
     "redness": "Roodheid",
     "scaling": "Schilfering",
     "thickness": "Dikte",
@@ -49,11 +49,11 @@
     "seeResultsHint": "Beoordeel minstens één gebied en druk op Klaar om resultaten te zien.",
     "showBack": "Toon achterkant",
     "showFront": "Toon voorkant",
-    "palmsSummary": "≈ {bsa} % van het lichaamsoppervlak · {percent} % van het gebied",
+    "palmsSummary": "{bsa} % van het lichaam · {percent} % van {area}",
     "info": "Informatie",
     "close": "Sluiten",
     "basedOnAreas": "Gebaseerd op {done} van {total} beoordeelde gebieden",
-    "palmHint": "1 handpalm = de handpalm van de patiënt zonder vingers ≈ 0,5 % van het lichaamsoppervlak. {max} handpalmen bedekken het hele gebied.",
+    "palmHint": "1 handpalm (van de patiënt, zonder vingers).",
     "buttocksHint": "De billen horen bij de benen.",
     "doneNext": "Klaar – volgende: {area}",
     "doneResults": "Klaar – bekijk resultaten",
@@ -66,7 +66,8 @@
     "scrollToContinue": "Lees de informatie voordat u verdergaat",
     "resetTitle": "Nieuwe beoordeling starten?",
     "resetConfirm": "Wissen",
-    "cancel": "Annuleren"
+    "cancel": "Annuleren",
+    "area": "Oppervlak"
   },
   "generalInfo": {
     "backgroundTitle": "Over PsoCalc",

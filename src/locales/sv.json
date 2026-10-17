@@ -25,7 +25,7 @@
     "chooseArea": "Välj område",
     "hands": "Händer",
     "hand": "Hand",
-    "handText": "Ange det berörda hudområdet med handflatemetoden, både fram- och baksida.",
+    "handText": "Antal handflator, fram- och baksida.",
     "redness": "Rodnad",
     "scaling": "Fjällning",
     "thickness": "Tjocklek",
@@ -49,11 +49,11 @@
     "seeResultsHint": "Bedöm minst ett område och tryck Klar för att se resultat.",
     "showBack": "Visa baksida",
     "showFront": "Visa framsida",
-    "palmsSummary": "≈ {bsa} % av kroppsytan · {percent} % av området",
+    "palmsSummary": "{bsa} % av kroppen · {percent} % av {area}",
     "info": "Information",
     "close": "Stäng",
     "basedOnAreas": "Baserat på {done} av {total} bedömda områden",
-    "palmHint": "1 handflata = patientens handflata utan fingrar ≈ 0,5 % av kroppsytan. {max} handflator täcker hela området.",
+    "palmHint": "1 handflata (patientens, utan fingrar).",
     "buttocksHint": "Rumpan räknas till ben.",
     "doneNext": "Klar – nästa: {area}",
     "doneResults": "Klar – se resultat",
@@ -66,7 +66,8 @@
     "scrollToContinue": "Läs informationen innan du går vidare",
     "resetTitle": "Börja en ny bedömning?",
     "resetConfirm": "Nollställ",
-    "cancel": "Avbryt"
+    "cancel": "Avbryt",
+    "area": "Yta"
   },
   "generalInfo": {
     "backgroundTitle": "Om PsoCalc",

@@ -10,61 +10,61 @@ import { useTranslation } from "@/context/TranslationContext";
 
 const STEP = 0.5;
 
-// Antal handflator (PSA) för ett område, i steg om 0,5
-const SliderInput = ({ value, max, label, onChange }) => {
+// Antal handflator (PSA) för ett område, i steg om 0,5.
+// `children` visas under reglaget, t.ex. hur stor andel som valts.
+const SliderInput = ({ value, max, label, onChange, children }) => {
   const { locale } = useTranslation();
   const clamp = (next) =>
     Math.min(Math.max(Math.round(next / STEP) * STEP, 0), max);
 
   return (
-    <div className={Styles.sliderInput}>
-      <IconButton
-        icon={faMinus}
-        label="−"
-        onClick={() => onChange(clamp(value - STEP))}
-      />
-
-      <div className={Styles.track}>
-        <Slider
-          min={0}
-          max={max}
-          step={STEP}
-          value={value}
-          onChange={(val) => onChange(clamp(val))}
-          ariaLabelForHandle={label}
-          styles={{
-            rail: { backgroundColor: "#d5dce6", height: 8 },
-            track: { backgroundColor: "var(--accent)", height: 8 },
-          }}
-          handleRender={(node) => (
-            <div
-              {...node.props}
-              className={`${node.props.className} ${Styles.handle}`}
-            >
-              <Image
-                src={assetPath("/images/hand.svg")}
-                alt=""
-                width={48}
-                height={50}
-                draggable={false}
-              />
-              <span className={Styles.handleValue}>
-                {formatNumber(value, locale)}
-              </span>
-            </div>
-          )}
+    <div className={Styles.sliderBox}>
+      <div className={Styles.sliderInput}>
+        <IconButton
+          icon={faMinus}
+          label="−"
+          onClick={() => onChange(clamp(value - STEP))}
         />
-        <div className={Styles.scale}>
-          <span>0</span>
-          <span>{max}</span>
-        </div>
-      </div>
 
-      <IconButton
-        icon={faPlus}
-        label="+"
-        onClick={() => onChange(clamp(value + STEP))}
-      />
+        <div className={Styles.track}>
+          <Slider
+            min={0}
+            max={max}
+            step={STEP}
+            value={value}
+            onChange={(val) => onChange(clamp(val))}
+            ariaLabelForHandle={label}
+            styles={{
+              rail: { backgroundColor: "#d5dce6", height: 8 },
+              track: { backgroundColor: "var(--accent)", height: 8 },
+            }}
+            handleRender={(node) => (
+              <div
+                {...node.props}
+                className={`${node.props.className} ${Styles.handle}`}
+              >
+                <Image
+                  src={assetPath("/images/hand.svg")}
+                  alt=""
+                  width={48}
+                  height={50}
+                  draggable={false}
+                />
+                <span className={Styles.handleValue}>
+                  {formatNumber(value, locale)}
+                </span>
+              </div>
+            )}
+          />
+        </div>
+
+        <IconButton
+          icon={faPlus}
+          label="+"
+          onClick={() => onChange(clamp(value + STEP))}
+        />
+      </div>
+      {children && <p className={Styles.summary}>{children}</p>}
     </div>
   );
 };

@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBan,
   faCircleInfo,
-  faHand,
   faRotate,
 } from "@fortawesome/free-solid-svg-icons";
 import Body from "@/components/Body";
@@ -127,6 +126,7 @@ const AreaEditor = ({ savedArea, category }) => {
           </div>
 
           <div className={Styles.editor}>
+            {/* Tillfälligt borttagen – "Ingen psoriasis här"
             <button
               type="button"
               className={Styles.noPsoriasis}
@@ -135,33 +135,33 @@ const AreaEditor = ({ savedArea, category }) => {
               <FontAwesomeIcon icon={faBan} />
               {t.translation.noPsoriasis}
             </button>
+            */}
 
             <section className={Styles.section}>
-              <p className={Styles.handText}>{t.translation.handText}</p>
+              <h2 className={Styles.sectionTitle}>{t.translation.area}</h2>
+              <p className={Styles.handText}>
+                {t.translation.handText}
+                <br />
+                {t.translation.palmHint}
+              </p>
+              {draft.id === "leg" && (
+                <p className={Styles.note}>
+                  <FontAwesomeIcon icon={faCircleInfo} />
+                  {t.translation.buttocksHint}
+                </p>
+              )}
               <SliderInput
                 value={draft.value}
                 max={draft.palms}
                 label={t.translation.chooseHandsHere}
                 onChange={(value) => updateDraft({ value })}
-              />
-              <p className={Styles.coverage}>
+              >
                 {format(t.translation.palmsSummary, {
                   bsa,
                   percent: areaPercent,
+                  area: category.title.toLowerCase(),
                 })}
-              </p>
-              <ul className={Styles.hints}>
-                <li>
-                  <FontAwesomeIcon icon={faHand} />
-                  {format(t.translation.palmHint, { max: draft.palms })}
-                </li>
-                {draft.id === "leg" && (
-                  <li>
-                    <FontAwesomeIcon icon={faCircleInfo} />
-                    {t.translation.buttocksHint}
-                  </li>
-                )}
-              </ul>
+              </SliderInput>
             </section>
 
             <BodyImages area={draft} onSelect={updateDraft} />
