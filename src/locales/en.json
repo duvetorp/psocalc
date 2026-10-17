@@ -110,7 +110,7 @@
     "steps": [
       {
         "title": "Assess each body part",
-        "text": "Head, arms, torso and legs are assessed separately. If there is no psoriasis, one tap is enough."
+        "text": "Head, arms, torso and legs are assessed separately."
       },
       {
         "title": "Enter area and severity",
@@ -121,5 +121,37 @@
         "text": "PASI, zPASI and BSA are calculated automatically when you are done."
       }
     ]
+  },
+  "guide": {
+    "readMore": "Read more",
+    "title": "Step by step",
+    "intro": "This is how you make an assessment. It only takes a couple of minutes.",
+    "steps": [
+      {
+        "title": "Choose a body part",
+        "text": "Tap a body part in the list. A green check shows which ones are done."
+      },
+      {
+        "title": "See the body part",
+        "text": "The figure shows the selected body part. The fill grows with the area and gets redder with higher redness. Tap Show back to turn the figure."
+      },
+      {
+        "title": "Enter the area",
+        "text": "Drag the hand or tap − and +. Count the patient's palms (without fingers), front and back together."
+      },
+      {
+        "title": "Choose severity",
+        "text": "Compare with the images and choose 0–4 for **redness**, **thickness** and **scaling**. If the patches differ, choose an average."
+      },
+      {
+        "title": "Tap Done",
+        "text": "The values are saved only when you tap Done. You go straight on to the next body part."
+      },
+      {
+        "title": "See the results",
+        "text": "PASI, zPASI and BSA are calculated automatically. New assessment clears everything."
+      }
+    ],
+    "tip": "Tap the i button on the assessment page to read the instructions again."
   }
 }

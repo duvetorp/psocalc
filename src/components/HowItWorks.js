@@ -1,9 +1,13 @@
+import { useState } from "react";
 import Styles from "@/styles/HowItWorks.module.css";
 import { useTranslation } from "@/context/TranslationContext";
+import Button from "@/components/Button";
+import GuideDialog from "@/components/GuideDialog";
 
 const HowItWorks = () => {
   const { t } = useTranslation();
   const { title, steps } = t.howItWorks;
+  const [isGuideOpen, setIsGuideOpen] = useState(false);
 
   return (
     <section className={Styles.howItWorks}>
@@ -21,6 +25,14 @@ const HowItWorks = () => {
           </li>
         ))}
       </ol>
+
+      <div className={Styles.readMore}>
+        <Button variant="secondary" fullWidth onClick={() => setIsGuideOpen(true)}>
+          {t.guide.readMore}
+        </Button>
+      </div>
+
+      {isGuideOpen && <GuideDialog onClose={() => setIsGuideOpen(false)} />}
     </section>
   );
 };
