@@ -25,7 +25,7 @@
     "chooseArea": "Choose area",
     "hands": "Hands",
     "hand": "Hand",
-    "handText": "Specify the affected skin area using the palm method, both front and back.",
+    "handText": "Number of palms, front and back.",
     "redness": "Redness",
     "scaling": "Scaling",
     "thickness": "Thickness",
@@ -40,7 +40,34 @@
     "generalInfoButton": "General info",
     "mathematicalFoundationButton": "Calculations",
     "disclaimerButton": "Disclaimer",
-    "chooseHandsHere": "Choose number of hands"
+    "chooseHandsHere": "Choose number of hands",
+    "notAssessed": "Not assessed",
+    "areasAssessed": "{done} of {total} areas assessed",
+    "total": "Total",
+    "newAssessment": "New assessment",
+    "confirmReset": "All values for this assessment will be cleared.",
+    "seeResultsHint": "Assess at least one area and press Done to see results.",
+    "showBack": "Show back",
+    "showFront": "Show front",
+    "palmsSummary": "{percent} % of {area}",
+    "info": "Information",
+    "close": "Close",
+    "basedOnAreas": "Based on {done} of {total} assessed areas",
+    "palmHint": "1 palm (the patient's, without fingers).",
+    "buttocksHint": "The buttocks count as part of the legs.",
+    "doneNext": "Done – next: {area}",
+    "doneResults": "Done – see results",
+    "noPsoriasis": "No psoriasis here",
+    "unsavedTitle": "Unsaved changes",
+    "unsavedText": "You have changed values for this area without pressing Done. If you go back, the changes will be lost.",
+    "keepEditing": "Keep editing",
+    "discardChanges": "Discard changes",
+    "showScoreAs": "Show score as",
+    "scrollToContinue": "Read the information before continuing",
+    "resetTitle": "Start a new assessment?",
+    "resetConfirm": "Reset",
+    "cancel": "Cancel",
+    "area": "Area"
   },
   "generalInfo": {
     "backgroundTitle": "About PsoCalc",
@@ -77,5 +104,55 @@
     "notices": "Notices:",
     "noticesFirst": "You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-exception-or-limitation' target='_blank'>exception or limitation</a>.",
     "noticesSecond": "No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-publicity-privacy-or-moral-rights' target='_blank'>publicity, privacy, or moral rights</a> may limit how you use the material."
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "steps": [
+      {
+        "title": "Assess each body part",
+        "text": "Head, arms, torso and legs are assessed separately."
+      },
+      {
+        "title": "Enter area and severity",
+        "text": "Enter the area in number of palms (hand without fingers) and choose redness, thickness and scaling (0–4) using the reference images."
+      },
+      {
+        "title": "See the results",
+        "text": "PASI, zPASI and BSA are calculated automatically when you are done."
+      }
+    ],
+    "palmLabel": "1 palm (hand without fingers)"
+  },
+  "guide": {
+    "readMore": "Read more",
+    "title": "Step by step",
+    "intro": "This is how you make an assessment. It only takes a couple of minutes.",
+    "steps": [
+      {
+        "title": "Choose a body part",
+        "text": "Tap a body part in the list. A green check shows which ones are done."
+      },
+      {
+        "title": "See the body part",
+        "text": "The figure shows the selected body part. The fill grows with the area and gets redder with higher redness. Tap Show back to turn the figure."
+      },
+      {
+        "title": "Enter the area",
+        "text": "Drag the hand or tap − and +. Count the patient's palms (without fingers), front and back together."
+      },
+      {
+        "title": "Choose severity",
+        "text": "Compare with the images and choose 0–4 for **redness**, **thickness** and **scaling**. If the patches differ, choose an average."
+      },
+      {
+        "title": "Tap Done",
+        "text": "The values are saved only when you tap Done. You go straight on to the next body part."
+      },
+      {
+        "title": "See the results",
+        "text": "PASI, zPASI and BSA are calculated automatically. New assessment clears everything."
+      }
+    ],
+    "tip": "Tap the i button on the assessment page to read the instructions again."
   }
 }

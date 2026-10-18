@@ -1,0 +1,74 @@
+.howItWorks h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.howItWorks ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.howItWorks li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.number {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.howItWorks strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-top: 5px;
+}
+
+.howItWorks p {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.readMore {
+  margin-top: 20px;
+}
+
+.withFigure {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.palm {
+  flex-shrink: 0;
+}
+
+.palm svg {
+  display: block;
+  width: 56px;
+  height: auto;
+  overflow: hidden;
+}
+
+.palmArea {
+  fill: var(--accent);
+  opacity: 0.32;
+  mix-blend-mode: multiply;
+}

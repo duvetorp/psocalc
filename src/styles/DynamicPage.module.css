@@ -1,59 +1,155 @@
-.dynamicPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 0 20px 0;
-}
-
-.dynamicPageContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 95%;
-}
-
-.bodyImages {
-  background: #ffffff;
+/* Mobil: ett kort med verktygsrad, kropp och formulär i följd */
+.shell {
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: center;
-  padding: 0 10px 20px 10px;
-  border-radius: 0 0 20px 20px;
+  max-width: 760px;
+  padding: 20px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
 }
 
-.backButtonContainer img {
+.main {
+  display: contents;
+}
+
+.toolbar {
+  order: 0;
+}
+
+.bodyPanel {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.editor {
+  order: 2;
+}
+
+.figure {
+  height: 340px;
+  display: flex;
+  justify-content: center;
+}
+
+.noPsoriasis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 16px;
+  padding: 0 16px;
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.noPsoriasis svg {
+  color: var(--success);
+}
+
+.section {
+  padding: 16px 0 4px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.sectionHeader .sectionTitle {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.handText {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.note {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: -4px 0 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.note svg {
+  color: var(--accent);
 }
 
 @media (min-width: 1200px) {
-  .dynamicPageContent {
-    width: 1200px;
+  .shell {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    align-items: start;
+    gap: 16px;
+    max-width: 1200px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
   }
 
-  .dynamicPageContent {
-    flex-direction: row-reverse;
-    gap: 5px;
+  .main,
+  .bodyPanel {
+    display: block;
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    padding: 32px 40px;
   }
 
-  .bodyImages {
-    padding: 40px;
-    border-radius: 20px;
-    height: 855px;
-    gap: 20px;
-    width: 70%;
-  }
-
-  .backButtonContainer {
-    width: 100%;
+  .bodyPanel {
+    position: sticky;
+    top: 16px;
     display: flex;
-    justify-content: space-between;
+    padding: 24px;
+    border-bottom: none;
   }
 
-  .dynamicPage {
-    min-height: 96dvh;
-    padding: 40px;
+  .figure {
+    height: 640px;
+  }
+
+  .editor {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+}
+
+/* Hover bara på enheter med mus – annars fastnar läget efter tryck på touch */
+@media (hover: hover) {
+  .noPsoriasis:hover {
+    border-color: var(--success);
+    background: #edf7ef;
+    color: var(--success);
   }
 }

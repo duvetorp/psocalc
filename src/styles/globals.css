@@ -1,22 +1,49 @@
 :root {
+  --accent: #2a6bff;
+  --accent-hover: #1d55d9;
+  --accent-soft: #eaf0ff;
+  --text: #1d2433;
+  --muted: #667085;
+  --border: #e6e9ef;
+  --surface: #ffffff;
+  --surface-2: #f4f6fa;
+  --success: #2f9e44;
+  --radius-lg: 20px;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 12px 32px rgba(16, 24, 40, 0.22);
+  --focus-ring: 0 0 0 3px rgba(42, 107, 255, 0.35);
   --background: #ffffff;
-  --textcolor: #000;
+  --textcolor: var(--text);
   --base-path: "";
 }
 
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
-  font-family: "Nunito Sans", sans-serif;
+  /* clip (inte hidden) så att position: sticky fungerar */
+  overflow-x: clip;
+  font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background-image: var(--bg-image);
+  background-color: #3b2a18;
+  min-height: 100dvh;
+}
+
+/* Fast bakgrundslager – background-attachment: fixed fungerar inte i iOS Safari */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(20, 14, 6, 0.25), rgba(20, 14, 6, 0.45)),
+    var(--bg-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: calc(100dvh - 1px);
 }
 
 * {
@@ -39,6 +66,16 @@ h6,
 p,
 li {
   color: var(--textcolor);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
 }
 
 .rc-slider {

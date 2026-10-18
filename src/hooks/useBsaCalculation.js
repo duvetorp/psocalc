@@ -13,7 +13,6 @@ const useBsaCalculation = (areas) => {
   let areaScores = {};
 
   areas.forEach((area) => {
-    console.log(area.value);
     if (!maxPalms[area.id]) return;
 
     //Beräkna hur stor del av kroppsområdet som är drabbat i procent

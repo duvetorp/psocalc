@@ -1,43 +1,67 @@
-.sliderInput {
-  text-align: center;
-  padding: 10px;
-  width: 100%;
+.sliderBox {
+  padding: 18px 12px 12px;
+  background: var(--surface-2);
+  border-radius: var(--radius);
 }
 
-.sliderInputContainer {
+.sliderInput {
   display: flex;
   align-items: center;
-  background: #e9eef4;
-  padding: 20px 10px;
-  border-radius: 15px;
-  width: 100%;
-  margin: auto;
-  gap: 10px;
-  height: 32px;
+  gap: 12px;
 }
 
-.sliderInputDecreaseButton,
-.sliderInputIncreaseButton {
-  background: #cbd5e1;
-  border: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  flex-shrink: 0;
-  color: #000;
+.summary {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
 }
 
-.sliderInputDecreaseWrapper {
+.track {
   flex: 1;
   position: relative;
-  padding: 0 30px;
+  padding: 0 18px;
+  /* Vågräta drag styr reglaget, lodräta scrollar sidan (touch) */
+  touch-action: pan-y;
 }
 
-@media (min-width: 1200px) {
-  .sliderInput {
-    padding: 0;
-  }
+.track :global(.rc-slider),
+.handle {
+  touch-action: pan-y;
 }
+
+.handle {
+  width: 48px !important;
+  height: 50px !important;
+  margin-top: -21px !important;
+  transform: translateX(-50%) !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  cursor: grab;
+}
+
+.handle:active {
+  cursor: grabbing;
+}
+
+.handle img {
+  display: block;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 3px rgba(16, 24, 40, 0.25));
+}
+
+.handleValue {
+  position: absolute;
+  /* Mitten av den grå cirkeln i hand.svg (36.8, 43.6 av 68 × 71) */
+  top: 61.4%;
+  left: 54.1%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text);
+  pointer-events: none;
+}
+
