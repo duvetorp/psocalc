@@ -49,3 +49,26 @@
 .readMore {
   margin-top: 20px;
 }
+
+.withFigure {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.palm {
+  flex-shrink: 0;
+}
+
+.palm svg {
+  display: block;
+  width: 56px;
+  height: auto;
+  overflow: hidden;
+}
+
+.palmArea {
+  fill: var(--accent);
+  opacity: 0.32;
+  mix-blend-mode: multiply;
+}

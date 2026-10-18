@@ -9,15 +9,17 @@ import IconButton from "@/components/IconButton";
 import { useTranslation } from "@/context/TranslationContext";
 import { assetPath } from "@/lib/assetPath";
 
-// Skärmdumpar för varje steg, i samma ordning som guide.steps i översättningarna
+// Skärmdumpar för varje steg, i samma ordning som guide.steps i översättningarna.
+// Det finns en uppsättning per språk i public/images/guide/<språk>/.
 const STEP_IMAGES = [
-  { src: "/images/guide/step1-choose-area.jpg", width: 600, height: 719 },
-  { src: "/images/guide/step2-body.jpg", width: 600, height: 772 },
-  { src: "/images/guide/step3-area.jpg", width: 600, height: 237 },
-  { src: "/images/guide/step4-severity.jpg", width: 600, height: 267 },
-  { src: "/images/guide/step5-done.jpg", width: 600, height: 119 },
-  { src: "/images/guide/step6-results.jpg", width: 600, height: 695 },
+  { file: "step1-choose-area.jpg", width: 600, height: 719 },
+  { file: "step2-body.jpg", width: 600, height: 772 },
+  { file: "step3-area.jpg", width: 600, height: 237 },
+  { file: "step4-severity.jpg", width: 600, height: 267 },
+  { file: "step5-done.jpg", width: 600, height: 119 },
+  { file: "step6-results.jpg", width: 600, height: 695 },
 ];
+const IMAGE_LOCALES = ["sv", "en", "nl", "es"];
 
 // Gör **ord** i översättningstexten till fetstil
 const withBold = (text) =>
@@ -29,8 +31,9 @@ const withBold = (text) =>
 
 // Steg-för-steg-guide genom appen, öppnas från "Så fungerar det"
 const GuideDialog = ({ onClose }) => {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const { title, intro, steps, tip } = t.guide;
+  const imageLocale = IMAGE_LOCALES.includes(locale) ? locale : "sv";
 
   useEffect(() => {
     const onKeyDown = (event) => event.key === "Escape" && onClose();
@@ -79,7 +82,9 @@ const GuideDialog = ({ onClose }) => {
                 {STEP_IMAGES[index] && (
                   <Image
                     className={Styles.image}
-                    src={assetPath(STEP_IMAGES[index].src)}
+                    src={assetPath(
+                      `/images/guide/${imageLocale}/${STEP_IMAGES[index].file}`
+                    )}
                     width={STEP_IMAGES[index].width}
                     height={STEP_IMAGES[index].height}
                     alt={step.title}

@@ -114,13 +114,14 @@
       },
       {
         "title": "Ange yta och svårighetsgrad",
-        "text": "Ange ytan i antal handflator och välj rodnad, tjocklek och fjällning (0–4) med hjälp av bilderna."
+        "text": "Ange ytan i antal handflator (hand utan fingrar) och välj rodnad, tjocklek och fjällning (0–4) med hjälp av bilderna."
       },
       {
         "title": "Se resultatet",
         "text": "PASI, zPASI och BSA räknas ut automatiskt när du är klar."
       }
-    ]
+    ],
+    "palmLabel": "1 handflata (hand utan fingrar)"
   },
   "guide": {
     "readMore": "Läs mer",

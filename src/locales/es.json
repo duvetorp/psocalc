@@ -114,13 +114,14 @@
       },
       {
         "title": "Indica superficie y gravedad",
-        "text": "Indica la superficie en número de palmas y elige enrojecimiento, grosor y descamación (0–4) con ayuda de las imágenes."
+        "text": "Indica la superficie en número de palmas (mano sin dedos) y elige enrojecimiento, grosor y descamación (0–4) con ayuda de las imágenes."
       },
       {
         "title": "Consulta el resultado",
         "text": "PASI, zPASI y BSA se calculan automáticamente al terminar."
       }
-    ]
+    ],
+    "palmLabel": "1 palma (mano sin dedos)"
   },
   "guide": {
     "readMore": "Leer más",

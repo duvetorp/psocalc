@@ -114,13 +114,14 @@
       },
       {
         "title": "Geef oppervlak en ernst aan",
-        "text": "Geef het oppervlak aan in aantal handpalmen en kies roodheid, dikte en schilfering (0–4) met behulp van de afbeeldingen."
+        "text": "Geef het oppervlak aan in aantal handpalmen (hand zonder vingers) en kies roodheid, dikte en schilfering (0–4) met behulp van de afbeeldingen."
       },
       {
         "title": "Bekijk het resultaat",
         "text": "PASI, zPASI en BSA worden automatisch berekend als u klaar bent."
       }
-    ]
+    ],
+    "palmLabel": "1 handpalm (hand zonder vingers)"
   },
   "guide": {
     "readMore": "Lees meer",

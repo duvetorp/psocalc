@@ -28,7 +28,8 @@
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  padding: 6px 2px 8px;
+  min-width: 0;
+  padding: 6px 0 8px;
   border: 2px solid transparent;
   border-radius: var(--radius);
   background: transparent;
@@ -57,11 +58,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 12px;
+  /* Krymper lite på smala skärmar så att ord som "Moderate" inte bryts */
+  font-size: clamp(10.5px, 3vw, 12px);
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .optionIndex {

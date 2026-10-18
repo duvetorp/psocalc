@@ -3,6 +3,7 @@ import Styles from "@/styles/HowItWorks.module.css";
 import { useTranslation } from "@/context/TranslationContext";
 import Button from "@/components/Button";
 import GuideDialog from "@/components/GuideDialog";
+import PalmIllustration from "@/components/PalmIllustration";
 
 const HowItWorks = () => {
   const { t } = useTranslation();
@@ -20,7 +21,15 @@ const HowItWorks = () => {
             </span>
             <div>
               <strong>{step.title}</strong>
-              <p>{step.text}</p>
+              {/* Steg 2 handlar om ytan – visa vad en handflata är bredvid texten */}
+              {index === 1 ? (
+                <div className={Styles.withFigure}>
+                  <p>{step.text}</p>
+                  <PalmIllustration label={t.howItWorks.palmLabel} />
+                </div>
+              ) : (
+                <p>{step.text}</p>
+              )}
             </div>
           </li>
         ))}
