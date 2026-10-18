@@ -11,6 +11,13 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="icon" href={assetPath("/favicon.ico")} />
+        {/* Ikon och namn när sidan läggs till på hemskärmen i iPhone */}
+        <link
+          rel="apple-touch-icon"
+          href={assetPath("/apple-touch-icon.png")}
+        />
+        <meta name="apple-mobile-web-app-title" content="PsoCalc" />
+        <meta name="application-name" content="PsoCalc" />
         <title>Psoriasis App - Hantera Din Hud</title>
         <meta
           name="description"
