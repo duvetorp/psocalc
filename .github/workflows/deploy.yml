@@ -1,6 +1,10 @@
 name: Deploy to GitHub Pages
 
 on:
+  # Publicera automatiskt när ny kod kommer in i main
+  push:
+    branches: [main]
+  # Går fortfarande att köra manuellt från Actions-fliken
   workflow_dispatch:
 
 permissions:
