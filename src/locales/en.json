@@ -114,13 +114,14 @@
       },
       {
         "title": "Enter area and severity",
-        "text": "Enter the area in number of palms and choose redness, thickness and scaling (0–4) using the reference images."
+        "text": "Enter the area in number of palms (hand without fingers) and choose redness, thickness and scaling (0–4) using the reference images."
       },
       {
         "title": "See the results",
         "text": "PASI, zPASI and BSA are calculated automatically when you are done."
       }
-    ]
+    ],
+    "palmLabel": "1 palm (hand without fingers)"
   },
   "guide": {
     "readMore": "Read more",
