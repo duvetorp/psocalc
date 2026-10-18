@@ -11,6 +11,7 @@ const languages = [
   { code: "en", label: "English", flag: assetPath("/images/flags/en.png") },
   { code: "nl", label: "Nederlands", flag: assetPath("/images/flags/nl.png") },
   { code: "es", label: "Español", flag: assetPath("/images/flags/es.svg") },
+  { code: "pt", label: "Português", flag: assetPath("/images/flags/br.svg") },
 ];
 
 export default function LanguageSwitcher() {
