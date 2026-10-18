@@ -1,0 +1,158 @@
+{
+  "categories": [
+    {
+      "id": "head",
+      "title": "Cabeça",
+      "description": "Aqui você encontra diferentes imagens e informações sobre a cabeça."
+    },
+    {
+      "id": "arm",
+      "title": "Braços",
+      "description": "Aqui você encontra diferentes imagens e informações sobre os braços."
+    },
+    {
+      "id": "torso",
+      "title": "Tronco",
+      "description": "Aqui você encontra diferentes imagens e informações sobre o tronco."
+    },
+    {
+      "id": "leg",
+      "title": "Pernas",
+      "description": "Aqui você encontra diferentes imagens e informações sobre as pernas."
+    }
+  ],
+  "translation": {
+    "chooseArea": "Escolha a área",
+    "hands": "Mãos",
+    "hand": "Mão",
+    "handText": "Número de palmas, frente e costas.",
+    "redness": "Eritema",
+    "scaling": "Descamação",
+    "thickness": "Espessura",
+    "seeResults": "Ver resultados",
+    "done": "Concluído",
+    "imagesTitles": ["Nenhum", "Leve", "Moderado", "Grave", "Muito grave"],
+    "continue": "Continuar",
+    "results": "Resultados",
+    "yourResults": "Seus valores",
+    "back": "Voltar",
+    "popupInfoText": "<p>Indique ERITEMA, ESPESSURA e DESCAMAÇÃO na área afetada. Se diferentes placas de psoríase tiverem características diferentes, tente encontrar uma média para a área. A superfície afetada é estimada pelo método da palma (PSA palm-surface-area). Uma palma (sem os dedos) = um PSA.</p><br><p> A ESPESSURA consiste em avaliar o quanto as lesões estão elevadas. Use os dedos para sentir se consegue perceber a borda das lesões. Observe que as NÁDEGAS fazem parte das PERNAS.</p>",
+    "generalInfoButton": "Informações gerais",
+    "mathematicalFoundationButton": "Cálculos",
+    "disclaimerButton": "Aviso legal",
+    "chooseHandsHere": "Escolha o número de mãos",
+    "notAssessed": "Não avaliado",
+    "areasAssessed": "{done} de {total} áreas avaliadas",
+    "total": "Total",
+    "newAssessment": "Nova avaliação",
+    "confirmReset": "Todos os valores desta avaliação serão apagados.",
+    "seeResultsHint": "Avalie pelo menos uma área e toque em Concluído para ver os resultados.",
+    "showBack": "Ver costas",
+    "showFront": "Ver frente",
+    "palmsSummary": "{percent} % de {area}",
+    "info": "Informações",
+    "close": "Fechar",
+    "basedOnAreas": "Com base em {done} de {total} áreas avaliadas",
+    "palmHint": "1 palma (do paciente, sem os dedos).",
+    "buttocksHint": "As nádegas fazem parte das pernas.",
+    "doneNext": "Concluído – a seguir: {area}",
+    "doneResults": "Concluído – ver resultados",
+    "noPsoriasis": "Sem psoríase aqui",
+    "unsavedTitle": "Alterações não salvas",
+    "unsavedText": "Você alterou valores desta área sem tocar em Concluído. Se voltar, as alterações serão perdidas.",
+    "keepEditing": "Continuar editando",
+    "discardChanges": "Descartar alterações",
+    "showScoreAs": "Mostrar pontuação como",
+    "scrollToContinue": "Leia as informações antes de continuar",
+    "resetTitle": "Iniciar uma nova avaliação?",
+    "resetConfirm": "Redefinir",
+    "cancel": "Cancelar",
+    "area": "Área"
+  },
+  "generalInfo": {
+    "backgroundTitle": "Sobre o PsoCalc",
+    "backgroundText": "O PsoCalc foi criado por iniciativa de Albert Duvetorp no Departamento de Dermatologia do Hospital Universitário de Skåne. O projeto recebeu apoio financeiro da ABBVIE e foi realizado em colaboração com a Webexpress Stockholm.",
+    "whyTitle": "Por quê?",
+    "whyText": "Todos que estudam a psoríase na pele precisam estimar a atividade da doença de forma simples. Queremos ajudar com este projeto de código aberto. Nosso objetivo é que o aplicativo web seja usado como está ou adaptado ao estudo do próprio usuário.",
+    "licensTitle": "Licença",
+    "licensText": "O zPASI pode ser usado de acordo com a CC-BY 4.0. O código do aplicativo web está sob a Licença MIT para código aberto. Você é livre para usar e modificar o código do aplicativo web. Pedimos que os criadores recebam os devidos créditos."
+  },
+  "mathematicalFoundation": {
+    "BSATitle": "BSA (Área de superfície corporal)",
+    "BSAText": "É calculada com base nas seguintes premissas. A. Cabeça e pescoço correspondem a 10% da superfície corporal total. B. Braços e mãos correspondem a 20% da superfície corporal total. C. Tronco (abdome, tórax, dorso) corresponde a 30% da superfície corporal total. D. Pernas, nádegas e pés correspondem a 40% da superfície corporal total. E. A Área da Palma (PSA) corresponde a 0,5% da superfície corporal total. PSA é a área da palma da mão da pessoa com psoríase (mão sem os dedos).",
+    "PASITitle": "PASI",
+    "PASIText": "É calculado pelo método descrito por Fredriksson e Pettersson, Dermatologica 157: 238-244 (1978). No aplicativo web, os cálculos também se baseiam nas premissas definidas para a BSA.",
+    "zPASITitle": "zPASI",
+    "zPASIText": "PASI modificado em que o escore de ÁREA no cálculo do PASI é calculado pela seguinte fórmula:",
+    "procent": "a% corresponde à % da região afetada (cabeça, braços, tronco, pernas) coberta por psoríase."
+  },
+  "disclaimer": {
+    "disclaimerTitle": "Aviso legal",
+    "disclaimerText": "Os criadores deste aplicativo web se isentam de qualquer responsabilidade legal por seu uso/aplicação. O aplicativo web não é um dispositivo médico registrado. O usuário deve usar o aplicativo web de forma crítica e é responsável por garantir que os cálculos sejam realizados corretamente.",
+    "MITLicenceTitle": "Licença MIT",
+    "MITLicenceText": "É concedida permissão, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e dos arquivos de documentação associados (o “Software”), para lidar com o Software sem restrições, incluindo, sem limitação, os direitos de usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do Software, e de permitir que as pessoas a quem o Software for fornecido o façam, sujeito às seguintes condições:",
+    "copyrightNotice": "O aviso de direitos autorais acima e este aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do Software.",
+    "software": "O SOFTWARE É FORNECIDO “NO ESTADO EM QUE SE ENCONTRA”, SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO A, GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UM FIM ESPECÍFICO E NÃO VIOLAÇÃO. EM NENHUMA HIPÓTESE OS AUTORES OU TITULARES DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER REIVINDICAÇÃO, DANOS OU OUTRA RESPONSABILIDADE, SEJA EM AÇÃO CONTRATUAL, ILÍCITO CIVIL OU DE OUTRA NATUREZA, DECORRENTE DE, OU EM CONEXÃO COM, O SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.",
+    "CCBYTitle": "CC-BY 4.0",
+    "youAreFreeTo": "Você tem o direito de:",
+    "youAreFreeToFirst": "Compartilhar: copiar e redistribuir o material em qualquer suporte ou formato, para qualquer fim, mesmo que comercial.",
+    "youAreFreeToSecond": "Adaptar: remixar, transformar e criar a partir do material, para qualquer fim, mesmo que comercial.",
+    "youAreFreeToThird": "O licenciante não pode revogar estes direitos desde que você respeite os termos da licença.",
+    "underTheFollowing": "De acordo com os seguintes termos:",
+    "underTheFollowingFirst": "Atribuição: você deve dar o <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-appropriate-credit' target='_blank'>crédito apropriado</a>, fornecer um link para a licença e <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-indicate-changes' target='_blank'>indicar se foram feitas alterações</a>. Você pode fazê-lo de qualquer forma razoável, mas não de uma forma que sugira que o licenciante endossa você ou o seu uso.",
+    "underTheFollowingSecond": "Sem restrições adicionais: você não pode aplicar termos jurídicos ou <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-technological-measures' target='_blank'>medidas de caráter tecnológico</a> que restrinjam legalmente outros de fazerem algo que a licença permita.",
+    "notices": "Avisos:",
+    "noticesFirst": "Você não tem de cumprir a licença para elementos do material que estejam em domínio público ou cuja utilização seja permitida por uma <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-exception-or-limitation' target='_blank'>exceção ou limitação</a> aplicável.",
+    "noticesSecond": "Não são dadas quaisquer garantias. A licença pode não lhe dar todas as autorizações necessárias para o uso pretendido. Por exemplo, outros direitos, como <a href='https://creativecommons.org/licenses/by/4.0/deed.en#ref-publicity-privacy-or-moral-rights' target='_blank'>direitos de imagem, de privacidade ou direitos morais</a>, podem limitar o uso do material."
+  },
+  "howItWorks": {
+    "title": "Como funciona",
+    "steps": [
+      {
+        "title": "Avalie cada parte do corpo",
+        "text": "Cabeça, braços, tronco e pernas são avaliados separadamente."
+      },
+      {
+        "title": "Informe área e gravidade",
+        "text": "Informe a área em número de palmas (mão sem os dedos) e escolha eritema, espessura e descamação (0–4) com a ajuda das imagens."
+      },
+      {
+        "title": "Veja o resultado",
+        "text": "PASI, zPASI e BSA são calculados automaticamente quando você terminar."
+      }
+    ],
+    "palmLabel": "1 palma (mão sem os dedos)"
+  },
+  "guide": {
+    "readMore": "Saiba mais",
+    "title": "Passo a passo",
+    "intro": "Veja como fazer uma avaliação. Leva só alguns minutos.",
+    "steps": [
+      {
+        "title": "Escolha uma parte do corpo",
+        "text": "Toque em uma parte do corpo na lista. Uma marca verde mostra quais já estão concluídas."
+      },
+      {
+        "title": "Veja a parte do corpo",
+        "text": "A figura mostra a parte escolhida. O preenchimento aumenta com a área e fica mais vermelho quanto maior o eritema. Toque em Ver costas para virar a figura."
+      },
+      {
+        "title": "Informe a área",
+        "text": "Arraste a mão ou toque em − e +. Conte as palmas do paciente (sem os dedos), somando frente e costas."
+      },
+      {
+        "title": "Escolha a gravidade",
+        "text": "Compare com as imagens e escolha 0–4 para **eritema**, **espessura** e **descamação**. Se as placas forem diferentes, escolha uma média."
+      },
+      {
+        "title": "Toque em Concluído",
+        "text": "Os valores só são salvos quando você toca em Concluído. Você vai direto para a próxima parte do corpo."
+      },
+      {
+        "title": "Veja o resultado",
+        "text": "PASI, zPASI e BSA são calculados automaticamente. Nova avaliação apaga tudo."
+      }
+    ],
+    "tip": "Toque no botão i na página de avaliação para ler as instruções novamente."
+  }
+}

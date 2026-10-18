@@ -19,7 +19,7 @@ const STEP_IMAGES = [
   { file: "step5-done.jpg", width: 600, height: 119 },
   { file: "step6-results.jpg", width: 600, height: 695 },
 ];
-const IMAGE_LOCALES = ["sv", "en", "nl", "es"];
+const IMAGE_LOCALES = ["sv", "en", "nl", "es", "pt"];
 
 // Gör **ord** i översättningstexten till fetstil
 const withBold = (text) =>
