@@ -22,8 +22,11 @@ import ConfirmDialog from "@/components/ConfirmDialog";
 import { format } from "@/lib/scores";
 import useDeviceType from "@/hooks/useDeviceType";
 import sv from "@/locales/sv.json";
+import { readFlag, setFlag } from "@/lib/storage";
 
-// Info-rutan visas automatiskt vid första områdesbesöket under sessionen
+// Info-rutan visas automatiskt första gången man bedömer ett område.
+// Det sparas i webbläsaren, så den visas inte igen vid senare besök.
+const INFO_SEEN_KEY = "hasSeenAreaInfo";
 let hasShownInfo = false;
 
 // Ändringar görs i ett lokalt utkast och sparas först när man trycker "Klar"
@@ -86,8 +89,9 @@ const AreaEditor = ({ savedArea, category }) => {
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
   useEffect(() => {
-    if (hasShownInfo) return;
+    if (hasShownInfo || readFlag(INFO_SEEN_KEY)) return;
     hasShownInfo = true;
+    setFlag(INFO_SEEN_KEY);
     setIsInfoOpen(true);
   }, []);
 
