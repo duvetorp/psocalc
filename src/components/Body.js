@@ -103,8 +103,9 @@ const Body = ({ area, side = "front", zoomed = false }) => {
           height={body.height + 40}
         >
           <g filter={`url(#${ids.feather})`}>
-            {coverage > 0 &&
-              shapes.map((d, index) => <path key={index} d={d} fill="#fff" />)}
+            {shapes.map((d, index) => (
+              <path key={index} d={d} fill="#fff" />
+            ))}
           </g>
         </mask>
         <pattern
@@ -148,21 +149,27 @@ const Body = ({ area, side = "front", zoomed = false }) => {
             width={body.width}
             height={body.height}
           />
-          <g className={Styles.fill} mask={`url(#${ids.mask})`}>
-            {layer({
-              fill: REDNESS_COLORS[area.redness] || REDNESS_COLORS[0],
-            })}
-            {layer({
-              fill: `url(#${ids.thickness})`,
-              opacity: area.thickness * 0.08,
-            })}
-          </g>
-          <g mask={`url(#${ids.mask})`}>
-            {layer({
-              fill: `url(#${ids.scaling})`,
-              opacity: area.scaling / 4,
-            })}
-          </g>
+          {/* Vid 0 tas fyllningen bort helt. En tom mask ritas inte om i
+              Safari på iOS, så den sista lilla fläcken blev annars kvar. */}
+          {coverage > 0 && (
+            <>
+              <g className={Styles.fill} mask={`url(#${ids.mask})`}>
+                {layer({
+                  fill: REDNESS_COLORS[area.redness] || REDNESS_COLORS[0],
+                })}
+                {layer({
+                  fill: `url(#${ids.thickness})`,
+                  opacity: area.thickness * 0.08,
+                })}
+              </g>
+              <g mask={`url(#${ids.mask})`}>
+                {layer({
+                  fill: `url(#${ids.scaling})`,
+                  opacity: area.scaling / 4,
+                })}
+              </g>
+            </>
+          )}
         </g>
       </g>
     </svg>
