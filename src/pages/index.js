@@ -7,6 +7,10 @@ import Button from "@/components/Button";
 import InfoSwitcher from "@/components/InfoSwitcher";
 import HowItWorks from "@/components/HowItWorks";
 import { assetPath } from "@/lib/assetPath";
+import { readFlag, setFlag } from "@/lib/storage";
+
+// Sparas när man en gång har scrollat förbi informationen
+const INFO_READ_KEY = "hasReadStartInfo";
 
 const FirstPage = () => {
   const { t } = useTranslation();
@@ -17,18 +21,23 @@ const FirstPage = () => {
   const [hasReadInfo, setHasReadInfo] = useState(false);
   const [isAtEnd, setIsAtEnd] = useState(false);
 
-  // "Fortsätt" aktiveras när slutet av info-kortet har synts ovanför knappen
+  // "Fortsätt" aktiveras när slutet av info-kortet har synts ovanför knappen,
+  // eller direkt om man redan har gjort det vid ett tidigare besök
   useEffect(() => {
+    const alreadyRead = readFlag(INFO_READ_KEY);
+    if (alreadyRead) setHasReadInfo(true);
+
     const footerHeight = footerRef.current?.offsetHeight || 0;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) return;
         setHasReadInfo(true);
+        setFlag(INFO_READ_KEY);
         observer.disconnect();
       },
       { rootMargin: `0px 0px -${footerHeight}px 0px` }
     );
-    observer.observe(infoEndRef.current);
+    if (!alreadyRead) observer.observe(infoEndRef.current);
 
     // Längst ner behövs ingen mörk bakgrund bakom knappen
     const endObserver = new IntersectionObserver(
